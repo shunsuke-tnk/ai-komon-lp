@@ -198,9 +198,9 @@ const App: React.FC = () => {
 
         <div className="mt-16 text-center">
           <div className="inline-block bg-gradient-to-r from-primary-50 via-white to-primary-50 rounded-[2rem] px-10 py-6 border border-primary-100">
-            <p className="text-xl font-bold text-text-heading font-rounded">
-              毎日0時残業から定時帰りを実現した私が、<br/>
-              <span className="text-primary-600">0から一緒に解決します</span>
+            <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded">
+              だからこそ、<span className="text-primary-600">寄り添う専門家</span>が必要です。<br/>
+              一人で抱え込まず、一緒に解決しませんか？
             </p>
           </div>
         </div>
