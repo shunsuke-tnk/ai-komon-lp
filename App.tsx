@@ -177,13 +177,13 @@ const App: React.FC = () => {
           <div className="bg-white rounded-[3rem] p-8 md:p-12 soft-shadow border border-white">
             <div className="space-y-5">
               {[
-                "日中は現場対応、定時後に事務処理。毎月35時間以上の残業",
-                "書類作成に2時間以上。過去の記録や資料を見ながら手入力する日々",
-                "日報・記録・報告書作成。この「ちょっとした作業」の積み重ねが残業に",
-                "利用者様への案内や掲示物がいつも似たようなものになり、マンネリ化している",
-                "採用チラシやパンフレットの外注費が高いが、自分で作るスキルも時間もない",
-                "AI導入の始め方がわからず、高額な投資のイメージがある",
-                "AI人材の採用コストが高く、教育できる人もいない",
+                "同じ内容を、何度も別の場所に入力している",
+                "過去のファイルやデータを探すだけで10分、20分と時間が消えていく",
+                "日報・議事録・報告書。「ちょっとした作業」の積み重ねが負担に",
+                "現場スタッフへの情報共有。伝えるだけなのに、余計な手間がかかる",
+                "AIに興味はあるけど、難しそう。導入しても定着しない気がする",
+                "既存のシステムは変えられない。結局、手入力は残るんでしょ？",
+                "本当は、目の前の人ともっと向き合う時間がほしい",
               ].map((text, i) => (
                 <label key={i} className="flex items-center gap-4 cursor-pointer group">
                   <div className="w-6 h-6 rounded-lg border-2 border-primary-300 bg-primary-50 flex items-center justify-center shrink-0 group-hover:border-primary-400 transition-colors">
