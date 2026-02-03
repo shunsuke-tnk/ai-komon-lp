@@ -189,7 +189,7 @@ const App: React.FC = () => {
                   <div className="w-6 h-6 rounded-lg border-2 border-primary-300 bg-primary-50 flex items-center justify-center shrink-0 group-hover:border-primary-400 transition-colors">
                     <Check className="w-4 h-4 text-primary-500" />
                   </div>
-                  <span className="text-text-body leading-relaxed">{text}</span>
+                  <span className="text-text-body leading-relaxed font-medium">{text}</span>
                 </label>
               ))}
             </div>
