@@ -101,7 +101,7 @@ const App: React.FC = () => {
 
       {/* ==================== HERO SECTION ==================== */}
       <Section background="cream" decoration className="pt-36 pb-24 lg:pt-48 lg:pb-36">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-10 relative z-10">
             {/* Animated Badge */}
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-primary-200 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -124,13 +124,13 @@ const App: React.FC = () => {
               </span>
             </h1>
 
-            <p className="text-lg text-text-body font-medium leading-relaxed max-w-xl">
+            <p className="text-lg text-text-body font-medium leading-relaxed max-w-xl mx-auto">
               実務の現場を知り尽くしたAI専門家が、<br/>
               御社のAI活用を0から伴走支援します。
             </p>
 
             {/* Authority Badges */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center">
               <span className="flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full text-sm font-bold text-text-body border border-white/50">
                 <Award className="w-4 h-4 text-primary-500" />
                 複数回全国トップセールス獲得
@@ -142,18 +142,18 @@ const App: React.FC = () => {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-5 pt-2">
+            <div className="flex flex-col sm:flex-row gap-5 pt-2 justify-center">
               <Button size="xl" variant="primary" onClick={scrollToContact} className="shadow-primary-200/50">
                 無料AI活用診断に申し込む
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
-            <p className="text-sm text-text-muted -mt-4">毎月3社限定・Zoom 30分</p>
+            <p className="text-sm text-text-muted">毎月3社限定・Zoom 30分</p>
 
             {/* Target Cards */}
             <div className="pt-8 border-t border-primary-200/60">
               <p className="text-sm font-bold text-text-muted mb-4">こんな方におすすめ</p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center">
                 {[
                   "AIを使いたいが何から始めればいいかわからない",
                   "書類作成・記録業務の時間を短縮したい",
@@ -164,61 +164,6 @@ const App: React.FC = () => {
                     {text}
                   </span>
                 ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Visual Element */}
-          <div className="relative lg:h-[600px] flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary-100 to-warm-100 rounded-[4rem] transform rotate-3 scale-95 opacity-80 blur-2xl animate-pulse-slow"></div>
-
-            <div className="relative bg-white/90 backdrop-blur-md rounded-[2.5rem] p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-white max-w-md w-full animate-float z-10">
-              <div className="flex items-center gap-5 mb-8 border-b border-warm-100 pb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center shadow-inner">
-                  <Sparkles className="w-8 h-8 text-primary-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-xl text-text-heading font-rounded">現場を変えた実績</p>
-                  <p className="text-sm text-text-muted">Before → After</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-warm-50/50 rounded-3xl p-6">
-                  <div className="flex justify-between items-end mb-2">
-                    <span className="text-sm text-text-muted font-bold">毎日の残業</span>
-                    <span className="text-2xl font-bold text-primary-600 font-rounded">0時→定時</span>
-                  </div>
-                  <div className="w-full bg-white rounded-full h-3 mb-1">
-                    <div className="bg-gradient-to-r from-primary-300 to-primary-400 h-3 rounded-full w-[100%] transition-all duration-1000"></div>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-1 bg-white border border-warm-100 rounded-2xl p-4 text-center">
-                    <p className="text-2xl font-bold text-primary-600 font-rounded">2時間</p>
-                    <p className="text-xs font-bold text-text-muted">→10分に短縮</p>
-                    <p className="text-[10px] text-text-muted mt-1">書類作成時間</p>
-                  </div>
-                  <div className="flex-1 bg-white border border-warm-100 rounded-2xl p-4 text-center">
-                    <p className="text-2xl font-bold text-primary-600 font-rounded">40年</p>
-                    <p className="text-xs font-bold text-text-muted">過去最高売上</p>
-                    <p className="text-[10px] text-text-muted mt-1">創業以来達成</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Bubble */}
-              <div className="absolute -right-8 top-20 bg-white p-4 rounded-t-3xl rounded-br-3xl rounded-bl-sm shadow-lg border border-warm-50 w-48 animate-float-delayed">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
-                    <MessageCircle className="w-5 h-5 text-primary-500" />
-                  </div>
-                  <div className="text-xs leading-tight">
-                    <p className="font-bold text-text-heading mb-0.5">いつでも相談OK</p>
-                    <p className="text-text-muted">チャット無制限</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
