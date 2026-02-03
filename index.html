@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI顧問サービス - 優しく寄り添うDXパートナー</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+              rounded: ['"Zen Maru Gothic"', 'sans-serif'],
+            },
+            colors: {
+              // Warm & Gentle Palette
+              base: {
+                50: '#fffbf7', // Warm Cream
+                100: '#fdf8f2',
+                200: '#f7f0e6',
+              },
+              primary: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                300: '#fdba74',
+                400: '#fb923c',
+                500: '#f97316', // Vibrant Orange
+                600: '#ea580c',
+                700: '#c2410c',
+              },
+              // Replacing Nature with "Warm" (Beige/Browns)
+              warm: {
+                50: '#faf7f5',
+                100: '#f5f0eb', // Light Beige
+                200: '#e8dfd6',
+                300: '#d6c6b8',
+                400: '#bca695',
+                500: '#a38977', // Mocha
+                600: '#886e5d',
+                700: '#715a4b', // Dark Coffee
+                800: '#5c4a3f',
+                900: '#4d3e36',
+              },
+              text: {
+                body: '#5c4a3f', // Warm dark brown instead of slate
+                heading: '#43302b', // Darker brown
+                muted: '#a38977', // Medium brown
+              }
+            },
+            animation: {
+              'float': 'float 8s ease-in-out infinite',
+              'float-delayed': 'float 8s ease-in-out 4s infinite',
+              'breathe': 'breathe 6s ease-in-out infinite',
+              'blob': 'blob 10s infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              breathe: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.03)' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Zen Kaku Gothic New', sans-serif;
+        background-color: #fffbf7;
+        color: #5c4a3f;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Zen Maru Gothic', sans-serif;
+        letter-spacing: 0.05em;
+        color: #43302b;
+      }
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+      /* Custom Scrollbar - Warm look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d6c6b8;
+        border-radius: 10px;
+        border: 2px solid #fffbf7;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #bca695;
+      }
+      
+      /* Frosted glass effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      
+      /* Soft shadows for cards */
+      .soft-shadow {
+        box-shadow: 0 10px 40px -10px rgba(163, 137, 119, 0.1);
+      }
+      .soft-shadow-hover:hover {
+        box-shadow: 0 20px 50px -12px rgba(163, 137, 119, 0.15);
+        transform: translateY(-4px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
