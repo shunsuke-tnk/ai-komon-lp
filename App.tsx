@@ -8,7 +8,6 @@ import {
   MessageCircle,
   TrendingUp,
   Users,
-  FileText,
   Zap,
   Target,
   Clock,
@@ -16,7 +15,6 @@ import {
   Star,
   Menu,
   X,
-  AlertTriangle,
   Lightbulb,
   Award,
   Calendar,
@@ -26,10 +24,7 @@ import {
   Sun,
   ChevronDown,
   Sparkles,
-  BookOpen,
   Settings,
-  Image,
-  PenTool
 } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -172,34 +167,33 @@ const App: React.FC = () => {
 
       {/* ==================== ISSUES SECTION ==================== */}
       <Section background="warm" id="issues" decoration>
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-3 block">Current Situation</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6 font-rounded leading-snug">
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-heading font-rounded leading-snug">
             こんなお悩みありませんか？
           </h2>
-          <p className="text-text-body">
-            日々のケアや対応に追われ、新しい技術を取り入れる余裕がない。<br/>
-            そんな経営者・施設長の悩みを解決します。
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {[
-            { text: "日中は現場対応、定時後に事務処理。毎月35時間以上の残業", icon: <Clock /> },
-            { text: "書類作成に2時間以上。過去の記録や資料を見ながら手入力する日々", icon: <FileText /> },
-            { text: "日報・記録・報告書作成。この「ちょっとした作業」の積み重ねが残業に", icon: <PenTool /> },
-            { text: "利用者様への案内や掲示物がいつも似たようなものになり、マンネリ化している", icon: <Image /> },
-            { text: "採用チラシやパンフレットの外注費が高いが、自分で作るスキルも時間もない", icon: <BookOpen /> },
-            { text: "AI導入の始め方がわからず、高額な投資のイメージがある", icon: <AlertTriangle /> },
-            { text: "AI人材の採用コストが高く、教育できる人もいない", icon: <Users /> },
-          ].map((item, i) => (
-            <div key={i} className="bg-white p-8 rounded-[2rem] soft-shadow border border-white flex items-start gap-5 hover:bg-white/80 transition-colors">
-              <div className="p-3 bg-primary-50 rounded-2xl text-primary-500 shrink-0 shadow-sm">
-                {React.cloneElement(item.icon as React.ReactElement, { size: 22 })}
-              </div>
-              <p className="font-bold text-text-body leading-relaxed text-sm pt-1">{item.text}</p>
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white rounded-[3rem] p-8 md:p-12 soft-shadow border border-white">
+            <div className="space-y-5">
+              {[
+                "日中は現場対応、定時後に事務処理。毎月35時間以上の残業",
+                "書類作成に2時間以上。過去の記録や資料を見ながら手入力する日々",
+                "日報・記録・報告書作成。この「ちょっとした作業」の積み重ねが残業に",
+                "利用者様への案内や掲示物がいつも似たようなものになり、マンネリ化している",
+                "採用チラシやパンフレットの外注費が高いが、自分で作るスキルも時間もない",
+                "AI導入の始め方がわからず、高額な投資のイメージがある",
+                "AI人材の採用コストが高く、教育できる人もいない",
+              ].map((text, i) => (
+                <label key={i} className="flex items-center gap-4 cursor-pointer group">
+                  <div className="w-6 h-6 rounded-lg border-2 border-primary-300 bg-primary-50 flex items-center justify-center shrink-0 group-hover:border-primary-400 transition-colors">
+                    <Check className="w-4 h-4 text-primary-500" />
+                  </div>
+                  <span className="text-text-body leading-relaxed">{text}</span>
+                </label>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
         <div className="mt-16 text-center">
