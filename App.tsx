@@ -207,141 +207,126 @@ const App: React.FC = () => {
       </Section>
 
       {/* ==================== WHY FAIL SECTION ==================== */}
-      <Section background="white" id="why-fail">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-heading leading-tight font-rounded">
-              なぜ、多くの会社が<br/><span className="bg-primary-100 text-primary-800 px-4 py-1 rounded-full mx-2 my-2 inline-block">AI導入に失敗</span>するのか
-            </h2>
-          </div>
+      <Section background="white" id="why-fail" className="!pt-16">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-heading leading-normal font-rounded text-center mb-12">
+            なぜ、多くの会社が<br/>
+            <span className="bg-primary-100 text-primary-800 px-4 py-1 rounded-full inline-block mt-2">AI導入に失敗</span>するのか
+          </h2>
 
-          <div className="bg-base-50 rounded-[3.5rem] p-8 md:p-16 relative overflow-hidden border border-base-200">
-            {/* Comparison */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-8 rounded-[2rem] border border-base-200">
-                <div className="text-text-muted font-bold mb-4 flex items-center gap-2">
-                  <X size={18} className="text-red-400"/>
-                  多くの人が想像する効率化
-                </div>
-                <ul className="space-y-3 text-text-body">
-                  <li className="flex items-center gap-2"><ChevronRight size={16} className="text-base-300"/>「ボタン一つで終わる」</li>
-                  <li className="flex items-center gap-2"><ChevronRight size={16} className="text-base-300"/>「自動で完璧に仕上がる」</li>
-                </ul>
-              </div>
-              <div className="bg-primary-50 p-8 rounded-[2rem] border-2 border-primary-200">
-                <div className="text-primary-600 font-bold mb-4 flex items-center gap-2">
-                  <Check size={18}/>
-                  本当の効率化
-                </div>
-                <ul className="space-y-3 text-text-body">
-                  <li className="flex items-center gap-2"><Check size={16} className="text-primary-500"/>資料を探す5分を<span className="font-bold">2分</span>に</li>
-                  <li className="flex items-center gap-2"><Check size={16} className="text-primary-500"/>文章作成3分を<span className="font-bold">1分</span>に</li>
-                  <li className="flex items-center gap-2"><Check size={16} className="text-primary-500"/>ファイル整理の2分を<span className="font-bold">30秒</span>に</li>
-                </ul>
-              </div>
-            </div>
+          <div className="prose prose-lg max-w-none text-text-body leading-relaxed">
+            <p>
+              多くの人は、「効率化」「AI活用」と聞くと、<strong>"ワンクリックですべてが終わるもの"</strong>を想像します。100時間かかっていたものが5分で終わる。確かに、それも事実です。
+            </p>
 
-            <div className="prose prose-lg text-text-body mx-auto relative z-10 leading-loose text-center">
-              <p className="text-xl font-bold text-text-heading mb-6 font-rounded">
-                最大の効率化とは、<br/>
-                <span className="text-primary-500 border-b-2 border-primary-200">地味な改善の積み重ね</span>です。
-              </p>
+            <p className="text-xl font-bold text-text-heading my-8">
+              しかし、実際はもっと泥臭い努力の連続でした。
+            </p>
 
-              <p className="text-base">
-                アプリ導入や外注だけでは解決しません。<br/>
-                <strong>「業務の分解」と「AIの適用可否」を判断し続ける専門家</strong>が必要です。
-              </p>
+            <p>
+              5分かかっていたものを3分に短縮する。10分かかっていたものを5分で終わらせる。それでもAIはミスをする。
+            </p>
 
-              <div className="mt-10 pt-10 border-t border-base-200">
-                <p className="font-bold text-text-heading text-2xl font-rounded flex items-center justify-center gap-3">
-                  <Lightbulb className="w-8 h-8 text-primary-500" />
-                  だから、「AI顧問」という答え
-                </p>
-                <p className="text-base text-text-muted mt-2">常に寄り添い伴走する、新しいかたちの支援です</p>
-              </div>
-            </div>
+            <p className="text-text-heading">
+              どうすれば、それを防ぐことができるだろう・・・<br/>
+              どうすれば、もっと早くできるだろう・・・<br/>
+              どうすれば、誰がやっても同じ質になるだろう・・・
+            </p>
+
+            <p>
+              <strong>最大の効率化とは、地味な改善の積み重ねです。</strong>アプリ導入や外注だけでは解決しません。「業務の分解」と「AIの適用可否」を判断し続ける専門家が必要なのです。
+            </p>
+
+            <p className="text-xl font-bold text-primary-600 text-center mt-10">
+              だから、「AI顧問」という答え。
+            </p>
           </div>
         </div>
       </Section>
 
       {/* ==================== WHY ME / STORY SECTION ==================== */}
-      <Section background="cream" id="story" decoration>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+      <Section background="cream" id="story">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
             <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-3 block">My Story</span>
             <h2 className="text-3xl md:text-4xl font-bold text-text-heading leading-tight font-rounded">
               なぜ、「伴走」にこだわるのか
             </h2>
           </div>
 
-          {/* Story Content */}
-          <div className="bg-white rounded-[3rem] p-8 md:p-14 mb-16 border border-white shadow-xl">
-            <div className="prose prose-lg text-text-body max-w-none">
-              <div className="flex items-start gap-6 mb-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center shrink-0">
-                  <Clock className="w-10 h-10 text-primary-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-text-heading font-rounded mb-2">残業だらけの営業時代</h3>
-                  <p className="text-text-body">毎日0時帰り。アナログ業務の山に埋もれ、見積もり作成、書類整理、報告書...全てが手作業でした。</p>
-                </div>
-              </div>
+          <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-lg">
+            <div className="prose prose-lg max-w-none text-text-body leading-relaxed">
 
-              <div className="flex items-start gap-6 mb-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-warm-100 to-warm-200 rounded-full flex items-center justify-center shrink-0">
-                  <Settings className="w-10 h-10 text-warm-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-text-heading font-rounded mb-2">システム自作と徹底的なデジタル化</h3>
-                  <p className="text-text-body">50ファイル以上のテンプレートを自作。「誰がやっても同じ品質でできる仕組み」を構築しました。</p>
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold text-text-heading font-rounded mt-0">残業だらけの営業時代</h3>
 
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary-200 to-primary-300 rounded-full flex items-center justify-center shrink-0">
-                  <Rocket className="w-10 h-10 text-primary-700" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-text-heading font-rounded mb-2">そして、結果が出た</h3>
-                  <p className="text-text-body">効率化への執念が、全国トップセールスと創業40年で過去最高売上という成果につながりました。</p>
-                </div>
-              </div>
+              <p>
+                冒頭、トップセールスなどと大それたことを言いましたが、決してかっこいいものではなく、泥臭い道のりでした。
+              </p>
+
+              <p>
+                あらゆることがアナログ。手書きでメモし、大量にコピーし、手入力を繰り返す・・・<strong>毎日0時を超えるのが当たり前でした。</strong>
+              </p>
+
+              <p>
+                見積もり作成に2時間以上。原価表すらなく、FAXを照らし合わせて原価を調べる。朝から晩まで現場に出て、帰社してから事務作業。どれだけ頑張っても0時より早く帰れない。
+              </p>
+
+              <p className="text-xl font-bold text-text-heading my-8 text-center">
+                「このままじゃ一生残業地獄から抜け出せない。」
+              </p>
+
+              <p>
+                そう気づいた日から、来る日も来る日も効率化に取り掛かりました。
+              </p>
+
+              <p>
+                提案資料は、選ぶだけで自動で完成するようにしました。原価表は、全て仕様書も含めて見積書と連動するように改善。見積もりシステムを自作し、数量を入れるだけで6種類の見積書が完成し、契約処理まで行えるものになりました。
+              </p>
+
+              <p>
+                誰が使っても使いやすいものにするために、完成後も何十回も修正を繰り返しました。
+              </p>
+
+              <p className="text-xl font-bold text-primary-600">
+                その結果、見積もり作成にかかる時間は2時間から15分まで短縮しました。
+              </p>
+
+              <hr className="my-8 border-base-200" />
+
+              <p className="text-xl font-bold text-text-heading">
+                決して、かっこいいものじゃなかった。
+              </p>
+
+              <p className="text-lg text-text-heading leading-relaxed">
+                それを教えてくれる人が、僕の横にいたら<br/>
+                <strong>どれだけ楽だっただろう・・・。</strong>
+              </p>
+
+              <p>
+                そんな想いから、このサービスを作りました。
+              </p>
+
+              <p>
+                AIに詳しいだけではありません。<strong>現場の痛みと、それを乗り越える泥臭いプロセスを知っています。</strong>だから、一時的な代行ではなく、現場に定着するまで「伴走」するサービスを。
+              </p>
+
             </div>
           </div>
 
           {/* Before/After Results */}
-          <h3 className="text-center text-2xl font-bold text-text-heading font-rounded mb-10">Before / After 実績</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {[
-              { label: "書類作成", before: "2時間", after: "10分" },
+              { label: "見積もり作成", before: "2時間", after: "15分" },
               { label: "勤務時間", before: "0時残業", after: "定時帰り" },
               { label: "セールス実績", before: "-", after: "全国トップ複数回" },
-              { label: "会社実績", before: "-", after: "創業40年で過去最高売上" },
+              { label: "会社実績", before: "-", after: "過去最高売上" },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-[2rem] p-6 text-center border border-white shadow-lg">
-                <p className="text-sm text-text-muted mb-2">{item.label}</p>
-                <div className="flex items-center justify-center gap-2 mb-1">
-                  <span className="text-base-400 line-through text-sm">{item.before}</span>
-                  <ArrowRight className="w-4 h-4 text-primary-500" />
-                </div>
-                <p className="text-xl font-bold text-primary-600 font-rounded">{item.after}</p>
+              <div key={i} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <p className="text-xs text-text-muted mb-1">{item.label}</p>
+                <p className="text-sm text-base-400 line-through">{item.before}</p>
+                <p className="text-lg font-bold text-primary-600 font-rounded">{item.after}</p>
               </div>
             ))}
-          </div>
-
-          {/* Conclusion Message */}
-          <div className="bg-[#43302b] rounded-[3rem] p-10 md:p-14 text-white text-center relative overflow-hidden">
-            <div className="relative z-10">
-              <p className="text-lg md:text-xl leading-relaxed mb-6">
-                AIに詳しいだけではありません。<br/>
-                <span className="font-bold">現場の痛みと、それを乗り越える泥臭いプロセスを知っています。</span>
-              </p>
-              <p className="text-warm-200">
-                だから、一時的な代行ではなく、<br/>
-                現場に定着するまで<span className="text-white font-bold">「伴走」</span>するサービスを作りました。
-              </p>
-            </div>
-            <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
           </div>
         </div>
       </Section>
