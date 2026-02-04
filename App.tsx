@@ -235,33 +235,88 @@ const App: React.FC = () => {
 
           {/* 失敗のループ構造 */}
           <div className="mb-10">
-            <h3 className="text-xl font-bold text-text-heading font-rounded text-center mb-6">
+            <h3 className="text-xl font-bold text-text-heading font-rounded text-center mb-8">
               多くの会社が陥る「負のループ」
             </h3>
-            <div className="bg-base-50 rounded-[2rem] p-6 md:p-8 border border-base-200">
-              <div className="flex flex-col items-center gap-3">
+            <div className="bg-base-50 rounded-[2rem] p-6 md:p-10 border border-base-200">
+              {/* 上段 3つ */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative">
                 {[
-                  { text: "AIにできることがわからない", icon: "😕" },
-                  { text: "情報更新が早すぎて追いきれない", icon: "😰" },
-                  { text: "諦めて情報収集をやめる", icon: "😔" },
-                  { text: "知識が「議事録要約」など一部で止まる", icon: "📝" },
-                  { text: "他の業務への応用が思いつかない", icon: "🤷" },
-                  { text: "効果を実感できず、使わなくなる", icon: "📉" },
-                ].map((item, i, arr) => (
-                  <React.Fragment key={i}>
-                    <div className="flex items-center gap-3 bg-white rounded-xl px-6 py-3 shadow-sm w-full max-w-md">
-                      <span className="text-xl">{item.icon}</span>
-                      <p className="text-text-body text-sm md:text-base">{item.text}</p>
+                  {
+                    num: "1",
+                    title: "AIにできることがわからない",
+                    desc: "ChatGPTは知っているけど、自社業務にどう活かせるか見当がつかない",
+                  },
+                  {
+                    num: "2",
+                    title: "情報更新が早すぎて追いきれない",
+                    desc: "毎週のように新しいツールが出て、どれを使えばいいかわからない",
+                  },
+                  {
+                    num: "3",
+                    title: "諦めて情報収集をやめる",
+                    desc: "忙しい日常業務の中で、AI情報を追うことを後回しにしてしまう",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="relative">
+                    <div className="bg-white rounded-2xl p-5 border border-base-100 shadow-sm h-full">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="w-7 h-7 bg-warm-100 text-warm-600 rounded-full flex items-center justify-center text-sm font-bold">{item.num}</span>
+                        <h4 className="font-bold text-text-heading text-base leading-tight">{item.title}</h4>
+                      </div>
+                      <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>
                     </div>
-                    {i < arr.length - 1 && (
-                      <ChevronDown className="w-5 h-5 text-base-300" />
+                    {/* 横矢印（1→2, 2→3） */}
+                    {i < 2 && (
+                      <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                        <ChevronRight className="w-6 h-6 text-warm-300" />
+                      </div>
                     )}
-                  </React.Fragment>
+                  </div>
                 ))}
               </div>
-              <p className="text-center text-red-500 font-bold mt-6 text-lg">
-                → AI導入失敗
-              </p>
+
+              {/* 縦矢印（上段→下段） */}
+              <div className="flex justify-end md:pr-[16.67%] py-2">
+                <ChevronDown className="w-6 h-6 text-warm-300" />
+              </div>
+
+              {/* 下段 3つ（右から左へ流れる） */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative">
+                {[
+                  {
+                    num: "6",
+                    title: "効果を実感できず、使わなくなる",
+                    desc: "結局「AIは難しい」という結論になり、元の業務に戻ってしまう",
+                  },
+                  {
+                    num: "5",
+                    title: "他の業務への応用が思いつかない",
+                    desc: "自社の業務フローのどこにAIが使えるのか、発想が広がらない",
+                  },
+                  {
+                    num: "4",
+                    title: "知識が「議事録要約」など一部で止まる",
+                    desc: "試しに使ってみたものの、それ以上の活用方法が見つからない",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="relative">
+                    <div className={`bg-white rounded-2xl p-5 border shadow-sm h-full ${item.num === "6" ? "border-red-200 bg-red-50/30" : "border-base-100"}`}>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${item.num === "6" ? "bg-red-100 text-red-500" : "bg-warm-100 text-warm-600"}`}>{item.num}</span>
+                        <h4 className={`font-bold text-base leading-tight ${item.num === "6" ? "text-red-600" : "text-text-heading"}`}>{item.title}</h4>
+                      </div>
+                      <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                    {/* 横矢印（6←5, 5←4）右から左なので、左に矢印 */}
+                    {i < 2 && (
+                      <div className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 z-10 rotate-180">
+                        <ChevronRight className="w-6 h-6 text-warm-300" />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
