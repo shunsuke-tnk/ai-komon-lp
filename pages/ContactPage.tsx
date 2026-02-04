@@ -34,15 +34,14 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Here you would integrate with Google Apps Script or EmailJS
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const response = await fetch('https://script.google.com/macros/s/AKfycbw1zMNsitPgh5WA-RH0QZZSNcXEmU8ncJdx6LrTolBRhnP5SWx84zglP4ighssGWAXXuA/exec', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+      });
 
-      // Example: Send to Google Apps Script
-      // const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
-      //   method: 'POST',
-      //   body: JSON.stringify(formData),
-      // });
+      if (!response.ok) {
+        throw new Error('送信に失敗しました');
+      }
 
       setIsSubmitted(true);
     } catch (err) {
