@@ -289,14 +289,14 @@ const App: React.FC = () => {
           </div>
 
           {/* 共通点への導入 */}
-          <div className="text-center pt-4 pb-12 md:pb-16">
+          <div className="text-center py-20 md:py-28">
             <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded">
               うまくいかない企業には、<span className="text-primary-600">ある共通点</span>があります。
             </p>
           </div>
 
           {/* 失敗のループ構造 */}
-          <div className="mb-10">
+          <div className="mt-8 md:mt-12 mb-10">
             <div className="bg-base-50 rounded-[2rem] p-6 md:p-10 border border-base-200">
               <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center mb-10">
                 多くの会社が陥る「負のループ」
