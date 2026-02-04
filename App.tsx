@@ -25,6 +25,10 @@ import {
   ChevronDown,
   Sparkles,
   Settings,
+  Video,
+  MessageSquare,
+  CheckCircle,
+  XCircle,
 } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -1001,34 +1005,65 @@ const App: React.FC = () => {
       </Section>
 
       {/* ==================== NEXT STEP / CTA SECTION ==================== */}
-      <Section background="white" className="!pt-10 !pb-20">
-        <div className="max-w-5xl mx-auto relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-300 to-primary-400 rounded-[3.5rem] transform rotate-1 opacity-20 blur-3xl"></div>
-          <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-[3.5rem] p-10 md:p-24 text-center relative overflow-hidden shadow-2xl border border-primary-200">
+      <Section background="warm" className="!py-20 md:!py-28">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Label */}
+          <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-4 block">NEXT STEP</span>
 
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-primary-200/30 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none"></div>
+          {/* Heading */}
+          <h2 className="text-3xl md:text-5xl font-bold text-text-heading mb-8 leading-tight font-rounded">
+            まずは<span className="text-primary-500">無料診断</span>から
+          </h2>
 
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold text-text-heading mb-8 leading-tight font-rounded">
-                まずは無料診断から
-              </h2>
-              <p className="text-lg text-text-body mb-12 leading-relaxed max-w-2xl mx-auto">
-                「何を導入すべきかわからない」状態でOK。<br/>
-                現場の課題をお聞かせください。
-              </p>
+          {/* Sub copy */}
+          <div className="mb-6">
+            <p className="text-lg md:text-xl text-text-heading font-bold leading-relaxed">
+              「何を導入すべきかわからない」<br />
+              「どこを改善すべきかわからない」
+            </p>
+          </div>
 
-              <div className="flex flex-col items-center gap-6">
-                <Button size="xl" variant="primary" onClick={scrollToContact} className="w-full md:w-auto px-16 py-6 text-xl ring-4 ring-primary-200">
-                  無料AI活用診断に申し込む
-                  <ArrowRight className="ml-2" />
-                </Button>
-                <p className="text-sm text-text-muted">
-                  毎月3社限定
-                </p>
+          <p className="text-text-muted mb-6">そんな状態で大丈夫です。</p>
+
+          <div className="mb-10">
+            <p className="text-text-heading font-bold text-lg md:text-xl leading-relaxed">
+              大事なのは、「どこを直すべきか」を知ること。<br />
+              それがわかれば、あとは一つずつ進めるだけです。
+            </p>
+          </div>
+
+          {/* 3 Feature Cards */}
+          <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-2xl mx-auto mb-8">
+            {[
+              { icon: <Video className="w-5 h-5 md:w-6 md:h-6" />, title: "Zoomで実施", desc: "30分・オンライン" },
+              { icon: <MessageSquare className="w-5 h-5 md:w-6 md:h-6" />, title: "業務ヒアリング", desc: "御社の課題を把握" },
+              { icon: <CheckCircle className="w-5 h-5 md:w-6 md:h-6" />, title: "改善点を提示", desc: "優先順位もお伝え" },
+            ].map((item, i) => (
+              <div key={i} className="bg-primary-50 border border-primary-100 rounded-xl p-4 md:p-6">
+                <div className="text-primary-500 flex justify-center mb-2">
+                  {item.icon}
+                </div>
+                <p className="font-bold text-text-heading text-sm md:text-base mb-1">{item.title}</p>
+                <p className="text-[10px] md:text-xs text-text-muted">{item.desc}</p>
               </div>
-            </div>
+            ))}
+          </div>
+
+          {/* No pressure message */}
+          <p className="flex items-center justify-center gap-2 text-text-muted text-sm mb-8">
+            <XCircle className="w-4 h-4" />
+            押し売りは一切ありません。診断だけでもOK。
+          </p>
+
+          {/* CTA Button */}
+          <div className="flex flex-col items-center gap-4">
+            <Button size="xl" variant="primary" onClick={scrollToContact} className="w-full md:w-auto px-12 md:px-16 py-5 md:py-6 text-lg md:text-xl shadow-lg shadow-primary-300/30">
+              無料AI活用診断に申し込む
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <p className="text-sm text-text-muted">
+              ※ 毎月3社限定 / Zoom 30分
+            </p>
           </div>
         </div>
       </Section>
