@@ -17,8 +17,8 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center font-bold tracking-wide transition-all duration-300 rounded-full active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed font-rounded";
   
   const variants = {
-    primary: "bg-gradient-to-r from-primary-400 to-primary-500 text-white shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 border border-transparent",
-    brown: "bg-gradient-to-r from-warm-600 to-warm-700 text-white shadow-[0_4px_20px_-4px_rgba(136,110,93,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(136,110,93,0.6)] hover:-translate-y-0.5 border border-transparent",
+    primary: "bg-gradient-to-r from-primary-400 to-primary-500 text-white shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 border border-transparent animate-heartbeat hover:animate-none",
+    brown: "bg-gradient-to-r from-warm-600 to-warm-700 text-white shadow-[0_4px_20px_-4px_rgba(136,110,93,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(136,110,93,0.6)] hover:-translate-y-0.5 border border-transparent animate-heartbeat hover:animate-none",
     secondary: "bg-white text-warm-700 shadow-sm hover:shadow-md hover:-translate-y-0.5 border border-warm-200",
     outline: "bg-transparent text-text-body border-2 border-warm-200 hover:border-primary-300 hover:text-primary-600",
     ghost: "bg-transparent text-text-body hover:bg-warm-100 hover:text-warm-800"
