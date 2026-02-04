@@ -797,41 +797,83 @@ const App: React.FC = () => {
 
       {/* ==================== COMPARISON SECTION ==================== */}
       <Section background="white" id="comparison">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-center text-2xl font-bold mb-10 text-text-heading font-rounded">機能別対応状況</h2>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-12 text-text-heading font-rounded">機能別対応状況</h2>
 
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b-2 border-base-200">
-                  <th className="text-left py-4 px-4 font-rounded text-text-heading">機能</th>
-                  <th className="text-center py-4 px-4 font-rounded text-text-heading">伴走プラン</th>
-                  <th className="text-center py-4 px-4 font-rounded text-text-heading bg-primary-50">自走プラン</th>
-                  <th className="text-center py-4 px-4 font-rounded text-text-heading">開発プラン</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { feature: "チャット相談", plans: [true, true, "開発関連のみ"] },
-                  { feature: "キックオフ/振り返りMTG", plans: [true, true, true] },
-                  { feature: "月次レポート", plans: [true, true, false] },
-                  { feature: "社員研修", plans: [false, "4名まで", false] },
-                  { feature: "内製化支援", plans: [false, true, false] },
-                  { feature: "オーダーメイド開発", plans: [false, false, true] },
-                ].map((row, i) => (
-                  <tr key={i} className="border-b border-base-100">
-                    <td className="py-4 px-4 text-text-body font-medium">{row.feature}</td>
-                    {row.plans.map((val, j) => (
-                      <td key={j} className={`text-center py-4 px-4 ${j === 1 ? 'bg-primary-50/50' : ''}`}>
-                        {val === true ? <Check className="w-5 h-5 text-primary-500 mx-auto" /> :
-                         val === false ? <X className="w-5 h-5 text-base-300 mx-auto" /> :
-                         <span className="text-sm text-text-body">{val}</span>}
-                      </td>
-                    ))}
-                  </tr>
+          {/* プランヘッダー */}
+          <div className="grid grid-cols-4 gap-2 md:gap-4 mb-2">
+            <div></div>
+            {[
+              { name: "伴走プラン", price: "10", target: "まずはAI活用を\n始めたい方" },
+              { name: "自走プラン", price: "30", target: "社内にAI人材を\n育てたい方" },
+              { name: "開発プラン", price: "50", target: "専用ツールを\n作りたい方" },
+            ].map((plan, i) => (
+              <div key={i} className={`text-center py-4 md:py-6 px-2 md:px-4 rounded-t-2xl ${i === 1 ? 'bg-primary-50 border-2 border-b-0 border-primary-200' : 'bg-warm-50 border border-b-0 border-warm-200'}`}>
+                <p className="font-bold text-text-heading text-sm md:text-base font-rounded mb-1">{plan.name}</p>
+                <p className="text-primary-500 font-bold text-lg md:text-2xl font-rounded">
+                  ¥{plan.price}<span className="text-xs md:text-sm text-text-muted font-normal">万円</span>
+                </p>
+                <p className="text-[10px] md:text-xs text-text-muted mt-1">/月</p>
+              </div>
+            ))}
+          </div>
+
+          {/* 機能一覧 */}
+          <div className="bg-warm-50 rounded-b-2xl rounded-tl-2xl overflow-hidden border border-warm-200">
+            {[
+              { feature: "チャット相談", desc: "Slackでいつでも質問", plans: [true, true, "開発関連のみ"] },
+              { feature: "キックオフMTG", desc: "現状把握と目標設定", plans: [true, true, true] },
+              { feature: "振り返りMTG", desc: "3ヶ月後の成果確認", plans: [true, true, true] },
+              { feature: "社員研修", desc: "4名までのAI活用研修", plans: [false, true, false] },
+              { feature: "内製化支援", desc: "自社でAI活用を進める体制づくり", plans: [false, true, true] },
+              { feature: "月1開発MTG", desc: "進捗確認とフィードバック", plans: [false, false, true] },
+              { feature: "オーダーメイド開発", desc: "御社専用AIツールを構築", plans: [false, false, true] },
+            ].map((row, i) => (
+              <div key={i} className={`grid grid-cols-4 gap-2 md:gap-4 ${i % 2 === 0 ? 'bg-white' : 'bg-warm-50/50'}`}>
+                {/* 機能名 */}
+                <div className="py-2.5 md:py-3 px-3 md:px-6">
+                  <p className="font-bold text-text-heading text-sm md:text-base">{row.feature}</p>
+                  <p className="text-[10px] md:text-xs text-text-muted mt-0.5 hidden md:block">{row.desc}</p>
+                </div>
+                {/* プラン別対応 */}
+                {row.plans.map((val, j) => (
+                  <div key={j} className={`flex items-center justify-center py-2.5 md:py-3 ${j === 1 ? 'bg-primary-50/30' : ''}`}>
+                    {val === true ? (
+                      <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-gradient-to-br from-primary-400 to-primary-500 flex items-center justify-center shadow-sm shadow-primary-200">
+                        <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" />
+                      </div>
+                    ) : val === false ? (
+                      <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-base-100 flex items-center justify-center">
+                        <span className="text-base-300 text-sm font-bold">—</span>
+                      </div>
+                    ) : (
+                      <div className="text-center">
+                        <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary-100 flex items-center justify-center mx-auto border-2 border-primary-300">
+                          <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary-500" />
+                        </div>
+                        <p className="text-[8px] md:text-[10px] text-text-muted mt-0.5">{val}</p>
+                      </div>
+                    )}
+                  </div>
                 ))}
-              </tbody>
-            </table>
+              </div>
+            ))}
+          </div>
+
+          {/* こんな方に */}
+          <div className="grid grid-cols-4 gap-2 md:gap-4 mt-6">
+            <div className="py-4 px-3 md:px-6">
+              <p className="text-primary-500 font-bold text-sm">こんな方に</p>
+            </div>
+            {[
+              "まずはAI活用を\n始めたい方",
+              "社内にAI人材を\n育てたい方",
+              "専用ツールを\n作りたい方",
+            ].map((target, i) => (
+              <div key={i} className={`py-3 md:py-4 px-2 md:px-4 rounded-xl ${i === 1 ? 'bg-primary-50 border border-primary-200' : 'bg-warm-50 border border-warm-200'}`}>
+                <p className="text-center text-xs md:text-sm text-text-body whitespace-pre-line leading-relaxed">{target}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
