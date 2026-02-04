@@ -289,14 +289,32 @@ const App: React.FC = () => {
           </div>
 
           {/* 共通点への導入 */}
-          <div className="text-center py-20 md:py-28">
-            <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded">
+          <div className="relative py-20 md:py-28">
+            {/* 左側: 男性 */}
+            <div className="hidden md:block absolute left-0 -bottom-16 -translate-x-1/4 w-48 lg:w-56">
+              <img
+                src="/images/3.png"
+                alt=""
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            {/* 右側: 女性 */}
+            <div className="hidden md:block absolute right-0 -bottom-16 translate-x-1/4 w-48 lg:w-56">
+              <img
+                src="/images/4.png"
+                alt=""
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center">
               うまくいかない企業には、<span className="text-primary-600">ある共通点</span>があります。
             </p>
           </div>
 
           {/* 失敗のループ構造 */}
-          <div className="mt-8 md:mt-12 mb-10">
+          <div className="mt-8 md:mt-12 mb-10 relative z-10">
             <div className="bg-base-50 rounded-[2rem] p-6 md:p-10 border border-base-200">
               <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center mb-10">
                 多くの会社が陥る「負のループ」
