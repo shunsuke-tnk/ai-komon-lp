@@ -504,45 +504,45 @@ const App: React.FC = () => {
           </div>
 
           {/* 成果ハイライト - 全幅 */}
-          <div className="bg-[#1a2e3b] rounded-3xl py-12 md:py-16 px-8 md:px-12 mb-20 md:mb-28">
+          <div className="bg-primary-100 rounded-3xl py-14 md:py-20 px-8 md:px-12 mb-20 md:mb-28">
             <div className="max-w-4xl mx-auto">
               {/* ストーリーの導入 */}
               <div className="text-center mb-10 md:mb-12">
-                <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-4">
+                <p className="text-text-muted text-lg md:text-xl leading-relaxed mb-4">
                   その結果、
                 </p>
-                <p className="text-white text-xl md:text-2xl font-bold leading-relaxed">
+                <p className="text-text-heading text-xl md:text-2xl font-bold leading-relaxed font-rounded">
                   営業の仕事をこなしながら、<br className="md:hidden" />
                   これだけのことを同時にできるようになりました。
                 </p>
               </div>
 
               {/* 達成項目リスト */}
-              <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-10">
-                <div className="bg-white/10 rounded-xl p-5 md:p-6">
-                  <p className="text-white/60 text-sm mb-2">営業成績</p>
-                  <p className="text-white text-lg md:text-xl font-bold">5年連続で個人年間売上2億円を維持</p>
+              <div className="grid md:grid-cols-2 gap-4 md:gap-5 mb-12">
+                <div className="bg-white rounded-2xl p-5 md:p-6 shadow-sm">
+                  <p className="text-primary-600 text-sm font-medium mb-2">営業成績</p>
+                  <p className="text-text-heading text-lg md:text-xl font-bold leading-snug">5年連続で個人年間売上2億円を維持</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-5 md:p-6">
-                  <p className="text-white/60 text-sm mb-2">マーケティング</p>
-                  <p className="text-white text-lg md:text-xl font-bold">Web制作・チラシ作成など全業務を担当</p>
+                <div className="bg-white rounded-2xl p-5 md:p-6 shadow-sm">
+                  <p className="text-primary-600 text-sm font-medium mb-2">マーケティング</p>
+                  <p className="text-text-heading text-lg md:text-xl font-bold leading-snug">Web制作・チラシ作成など全業務を担当</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-5 md:p-6">
-                  <p className="text-white/60 text-sm mb-2">会社への貢献</p>
-                  <p className="text-white text-lg md:text-xl font-bold">創業40年で過去最高集客数・最高売上を達成</p>
+                <div className="bg-white rounded-2xl p-5 md:p-6 shadow-sm">
+                  <p className="text-primary-600 text-sm font-medium mb-2">会社への貢献</p>
+                  <p className="text-text-heading text-lg md:text-xl font-bold leading-snug">創業40年で過去最高集客数・最高売上を達成</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-5 md:p-6">
-                  <p className="text-white/60 text-sm mb-2">外部活動</p>
-                  <p className="text-white text-lg md:text-xl font-bold">経営塾でAI講座を担当・AIコンサルも実施</p>
+                <div className="bg-white rounded-2xl p-5 md:p-6 shadow-sm">
+                  <p className="text-primary-600 text-sm font-medium mb-2">外部活動</p>
+                  <p className="text-text-heading text-lg md:text-xl font-bold leading-snug">経営塾でAI講座を担当・AIコンサルも実施</p>
                 </div>
               </div>
 
               {/* 結論 */}
-              <div className="text-center border-t border-white/20 pt-8">
-                <p className="text-white/80 text-lg leading-relaxed mb-3">
+              <div className="text-center pt-8 border-t border-primary-200">
+                <p className="text-text-muted text-lg leading-relaxed mb-3">
                   業務量は圧倒的に増えたにも関わらず、
                 </p>
-                <p className="text-xl md:text-2xl text-white font-bold font-rounded leading-relaxed">
+                <p className="text-2xl md:text-3xl text-text-heading font-bold font-rounded leading-relaxed">
                   定時で帰ることができるようになったのです。
                 </p>
               </div>
