@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { Section } from '../components/Section';
 import { Button } from '../components/Button';
-import { Sun, ArrowLeft, Check, Send } from 'lucide-react';
+import { ArrowLeft, Check, Send } from 'lucide-react';
 
 // EmailJS設定
 const EMAILJS_SERVICE_ID = 'service_ge0upmi';
@@ -94,79 +93,55 @@ const ContactPage: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen text-text-body font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden">
-        {/* Header */}
-        <header className="fixed top-0 inset-x-0 z-50 transition-all duration-300 px-2 md:px-0 pt-2 md:pt-4">
-          <div className="glass shadow-sm border border-white/60 rounded-full max-w-7xl mx-auto px-4 sm:px-8">
-            <div className="flex justify-between items-center h-16 md:h-20">
-              <a href="/" className="flex items-center gap-3">
-                <div className="bg-gradient-to-br from-primary-400 to-primary-500 text-white p-2.5 rounded-full shadow-lg shadow-primary-500/20">
-                  <Sun className="w-5 h-5 fill-current" />
-                </div>
-                <span className="font-rounded font-bold text-xl text-text-heading tracking-tight">AI顧問</span>
-              </a>
+      <div className="min-h-screen text-text-body font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden bg-warm-50">
+        <div className="min-h-screen flex items-center justify-center py-8 px-4">
+          <div className="max-w-md mx-auto text-center">
+            <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Check className="w-10 h-10 text-primary-600" />
             </div>
-          </div>
-        </header>
-
-        <Section background="cream" decoration className="pt-36 pb-24 lg:pt-48 lg:pb-36 min-h-screen flex items-center">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Check className="w-12 h-12 text-primary-600" />
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-text-heading mb-6 font-rounded">
+            <h1 className="text-2xl md:text-3xl font-bold text-text-heading mb-4 font-rounded">
               送信が完了しました
             </h1>
-            <p className="text-lg text-text-body mb-10 leading-relaxed">
+            <p className="text-text-body mb-8 leading-relaxed">
               お問い合わせいただきありがとうございます。<br />
               営業日24時間以内に担当者よりご連絡いたします。
             </p>
             <a href="/">
-              <Button variant="primary" size="lg">
-                <ArrowLeft className="w-5 h-5 mr-2" />
+              <Button variant="primary" size="md">
+                <ArrowLeft className="w-4 h-4 mr-2" />
                 トップページに戻る
               </Button>
             </a>
           </div>
-        </Section>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen text-text-body font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden">
-      {/* Header */}
-      <header className="fixed top-0 inset-x-0 z-50 transition-all duration-300 px-2 md:px-0 pt-2 md:pt-4">
-        <div className="glass shadow-sm border border-white/60 rounded-full max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
-            <a href="/" className="flex items-center gap-3">
-              <div className="bg-gradient-to-br from-primary-400 to-primary-500 text-white p-2.5 rounded-full shadow-lg shadow-primary-500/20">
-                <Sun className="w-5 h-5 fill-current" />
-              </div>
-              <span className="font-rounded font-bold text-xl text-text-heading tracking-tight">AI顧問</span>
-            </a>
-            <a href="/" className="text-sm text-text-muted hover:text-primary-600 transition-colors flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
-              トップに戻る
-            </a>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen text-text-body font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden bg-warm-50">
+      <div className="min-h-screen flex flex-col justify-center py-6 px-4">
+        <div className="max-w-xl mx-auto w-full">
+          {/* 戻るボタン */}
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary-600 transition-colors mb-4"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            トップページに戻る
+          </a>
 
-      <Section background="cream" decoration className="pt-32 pb-16 lg:pt-40 lg:pb-24">
-        <div className="max-w-xl mx-auto">
-          <div className="text-center mb-8">
-            <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-2 block">CONTACT</span>
-            <h1 className="text-2xl md:text-3xl font-bold text-text-heading mb-3 font-rounded">
+          {/* タイトル */}
+          <div className="text-center mb-6">
+            <h1 className="text-2xl md:text-3xl font-bold text-text-heading mb-2 font-rounded">
               無料AI活用診断
             </h1>
-            <p className="text-sm text-text-body">
-              以下のフォームにご記入ください。<br />
-              営業日24時間以内にご連絡いたします。
+            <p className="text-sm text-text-muted">
+              以下のフォームにご記入ください。営業日24時間以内にご連絡いたします。
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-white">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-white/50">
             {error && (
               <div
                 ref={errorRef}
@@ -310,17 +285,7 @@ const ContactPage: React.FC = () => {
             </div>
           </form>
         </div>
-      </Section>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-base-200 py-6">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-text-muted text-sm mb-1">株式会社ノヴァリス</p>
-          <p className="text-text-muted text-xs">
-            &copy; 2024 AI Advisor Service. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      </div>
     </div>
   );
 };
