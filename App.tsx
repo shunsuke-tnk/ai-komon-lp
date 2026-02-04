@@ -700,24 +700,71 @@ const App: React.FC = () => {
       {/* ==================== FLOW SECTION ==================== */}
       <Section background="cream" id="flow" decoration>
         <h2 className="text-center text-3xl font-bold mb-16 text-text-heading font-rounded">ご利用の流れ</h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 relative">
-            {[
-              { step: "01", title: "無料AI活用診断", desc: "現状把握と改善可否の明確化 (Zoom 30分)" },
-              { step: "02", title: "ロードマップ提示", desc: "改善計画の提示" },
-              { step: "03", title: "ご契約", desc: "プラン選択（初月試用期間）" },
-              { step: "04", title: "サービス開始", desc: "キックオフMTG、Slack連携" },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-6 items-start group">
-                <div className="text-5xl font-bold text-primary-200 group-hover:text-primary-300 transition-colors leading-none -mt-2 font-rounded">
-                  {item.step}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-text-heading mb-2 font-rounded">{item.title}</h3>
-                  <p className="text-text-body leading-relaxed">{item.desc}</p>
-                </div>
+        <div className="max-w-2xl mx-auto">
+          <div className="flex flex-col gap-4">
+            {/* Step 01 */}
+            <div className="bg-white rounded-2xl p-6 border-l-4 border-primary-500 shadow-sm">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl font-bold text-primary-500 font-rounded">01</span>
+                <h3 className="text-xl font-bold text-text-heading font-rounded">無料AI活用診断</h3>
               </div>
-            ))}
+              <p className="text-text-body leading-relaxed mb-3">
+                改善の第一歩は<span className="font-bold text-text-heading">現状を把握すること</span>。<br />
+                一緒に業務を棚卸しし、「何が改善できて、何ができないか」を明確にします。
+              </p>
+              <div className="flex gap-2">
+                <span className="bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded">完全無料</span>
+                <span className="bg-base-100 text-text-body text-xs font-bold px-3 py-1 rounded">Zoom 30分</span>
+              </div>
+            </div>
+
+            {/* Arrow */}
+            <div className="flex justify-center text-primary-300">
+              <ChevronDown className="w-8 h-8" />
+            </div>
+
+            {/* Step 02 */}
+            <div className="bg-white rounded-2xl p-6 border border-base-200 shadow-sm">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl font-bold text-primary-500 font-rounded">02</span>
+                <h3 className="text-xl font-bold text-text-heading font-rounded">ロードマップ提示</h3>
+              </div>
+              <p className="text-text-body leading-relaxed">
+                「何を」「どの順番で」改善するか、具体的な計画と期間をご提示します。
+              </p>
+            </div>
+
+            {/* Arrow */}
+            <div className="flex justify-center text-primary-300">
+              <ChevronDown className="w-8 h-8" />
+            </div>
+
+            {/* Step 03 */}
+            <div className="bg-white rounded-2xl p-6 border border-base-200 shadow-sm">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl font-bold text-primary-500 font-rounded">03</span>
+                <h3 className="text-xl font-bold text-text-heading font-rounded">ご契約</h3>
+              </div>
+              <p className="text-text-body leading-relaxed">
+                最適なプランをご選択。最初の1ヶ月は試用期間なので安心してスタートできます。
+              </p>
+            </div>
+
+            {/* Arrow */}
+            <div className="flex justify-center text-primary-300">
+              <ChevronDown className="w-8 h-8" />
+            </div>
+
+            {/* Step 04 */}
+            <div className="bg-white rounded-2xl p-6 border border-base-200 shadow-sm">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl font-bold text-primary-500 font-rounded">04</span>
+                <h3 className="text-xl font-bold text-text-heading font-rounded">サービス開始</h3>
+              </div>
+              <p className="text-text-body leading-relaxed">
+                キックオフMTGで目標を共有。いつでも相談できる体制で伴走します。
+              </p>
+            </div>
           </div>
         </div>
       </Section>
