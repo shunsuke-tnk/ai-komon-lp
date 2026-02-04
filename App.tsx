@@ -95,66 +95,73 @@ const App: React.FC = () => {
       </header>
 
       {/* ==================== HERO SECTION ==================== */}
-      <Section background="cream" decoration className="pt-36 pb-24 lg:pt-48 lg:pb-36">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="space-y-10 relative z-10">
+      <section className="relative min-h-screen pt-36 pb-24 lg:pt-48 lg:pb-36 overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/hero.png')" }}
+        />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="max-w-xl lg:max-w-2xl">
             {/* Animated Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-primary-200 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-primary-200 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700 mb-8">
               <span className="flex h-2.5 w-2.5 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-500"></span>
               </span>
-              <span className="text-sm font-bold text-warm-800 tracking-wide font-rounded">AI PARTNER & ADVISOR - DIGITAL TRANSFORMATION</span>
+              <span className="text-sm font-bold text-warm-800 tracking-wide font-rounded">AI PARTNER & ADVISOR</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-text-heading tracking-tight font-rounded">
-              <span className="inline-block relative whitespace-nowrap">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-text-heading tracking-tight font-rounded mb-6">
+              <span className="inline-block relative">
                 現場を知るAI顧問が、
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary-300/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" /></svg>
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 inline-block mt-2 whitespace-nowrap">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 inline-block mt-2">
                 月10万円で御社に
               </span>
             </h1>
 
-            <p className="text-lg text-text-body font-medium leading-relaxed max-w-xl mx-auto">
+            <p className="text-lg text-text-body font-medium leading-relaxed mb-8">
               実務の現場を知り尽くしたAI専門家が、<br/>
               御社のAI活用を0から伴走支援します。
             </p>
 
             {/* Authority Badges */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              <span className="flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full text-sm font-bold text-text-body border border-white/50">
+            <div className="flex flex-wrap gap-3 mb-8">
+              <span className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold text-text-body border border-white/50">
                 <Award className="w-4 h-4 text-primary-500" />
                 複数回全国トップセールス獲得
               </span>
-              <span className="flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full text-sm font-bold text-text-body border border-white/50">
+              <span className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold text-text-body border border-white/50">
                 <TrendingUp className="w-4 h-4 text-primary-500" />
                 5年連続 個人年間売上2億円
               </span>
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-5 pt-2 justify-center">
+            <div className="flex flex-col sm:flex-row gap-5 mb-2">
               <Button size="xl" variant="primary" onClick={scrollToContact} className="shadow-primary-200/50">
                 無料AI活用診断に申し込む
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
-            <p className="text-sm text-text-muted">毎月3社限定・Zoom 30分</p>
+            <p className="text-sm text-text-muted mb-8">毎月3社限定・Zoom 30分</p>
 
             {/* Target Cards */}
             <div className="pt-8 border-t border-primary-200/60">
               <p className="text-sm font-bold text-text-muted mb-4">こんな方におすすめ</p>
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap gap-3">
                 {[
                   "AIを使いたいが何から始めればいいかわからない",
                   "書類作成・記録業務の時間を短縮したい",
                   "若手にAIを教えられる人がいない"
                 ].map((text, i) => (
-                  <span key={i} className="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full text-sm text-text-body">
+                  <span key={i} className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-text-body">
                     <Check className="w-4 h-4 text-primary-500" />
                     {text}
                   </span>
@@ -163,7 +170,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ==================== ISSUES SECTION ==================== */}
       <Section background="warm" id="issues" decoration>
@@ -208,37 +215,104 @@ const App: React.FC = () => {
 
       {/* ==================== WHY FAIL SECTION ==================== */}
       <Section background="white" id="why-fail" className="!pt-16">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-text-heading leading-normal font-rounded text-center mb-12">
             なぜ、多くの会社が<br/>
             <span className="bg-primary-100 text-primary-800 px-4 py-1 rounded-full inline-block mt-2">AI導入に失敗</span>するのか
           </h2>
 
-          <div className="prose prose-lg max-w-none text-text-body leading-relaxed">
-            <p>
-              多くの人は、「効率化」「AI活用」と聞くと、<strong>"ワンクリックですべてが終わるもの"</strong>を想像します。100時間かかっていたものが5分で終わる。確かに、それも事実です。
+          {/* 4つの失敗パターン - 横並び */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { num: "01", text: "AIで何ができるか\nわからない" },
+              { num: "02", text: "情報更新が早すぎて\n追いきれない" },
+              { num: "03", text: "ツールを入れたけど\n使わなくなった" },
+              { num: "04", text: "一部だけ効率化して\n他は変わらない" },
+            ].map((item, i) => (
+              <div key={i} className="bg-warm-50 border border-warm-100 rounded-2xl p-5 text-center">
+                <span className="text-3xl font-bold text-warm-200 font-rounded">{item.num}</span>
+                <p className="text-text-body font-medium mt-2 text-sm leading-relaxed whitespace-pre-line">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* 失敗のループ構造 */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-text-heading font-rounded text-center mb-6">
+              多くの会社が陥る「負のループ」
+            </h3>
+            <div className="bg-base-50 rounded-[2rem] p-6 md:p-8 border border-base-200">
+              <div className="flex flex-col items-center gap-3">
+                {[
+                  { text: "AIにできることがわからない", icon: "😕" },
+                  { text: "情報更新が早すぎて追いきれない", icon: "😰" },
+                  { text: "諦めて情報収集をやめる", icon: "😔" },
+                  { text: "知識が「議事録要約」など一部で止まる", icon: "📝" },
+                  { text: "他の業務への応用が思いつかない", icon: "🤷" },
+                  { text: "効果を実感できず、使わなくなる", icon: "📉" },
+                ].map((item, i, arr) => (
+                  <React.Fragment key={i}>
+                    <div className="flex items-center gap-3 bg-white rounded-xl px-6 py-3 shadow-sm w-full max-w-md">
+                      <span className="text-xl">{item.icon}</span>
+                      <p className="text-text-body text-sm md:text-base">{item.text}</p>
+                    </div>
+                    {i < arr.length - 1 && (
+                      <ChevronDown className="w-5 h-5 text-base-300" />
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+              <p className="text-center text-red-500 font-bold mt-6 text-lg">
+                → AI導入失敗
+              </p>
+            </div>
+          </div>
+
+          {/* 本当に必要なもの */}
+          <div className="bg-primary-50 rounded-[2rem] p-8 md:p-10 mb-10 border border-primary-100">
+            <h3 className="text-xl font-bold text-primary-800 font-rounded text-center mb-2">
+              本当に必要なのは、新しいツールではありません
+            </h3>
+            <p className="text-center text-primary-700 mb-8">
+              「業務のどこにAIが使えるか」を見極める専門家です。
             </p>
 
-            <p className="text-xl font-bold text-text-heading my-8">
-              しかし、実際はもっと泥臭い努力の連続でした。
-            </p>
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                {
+                  title: "業務を分解する",
+                  desc: "御社の業務を細かく分解し、AIでできる部分とできない部分を切り分けます",
+                },
+                {
+                  title: "使える場所を見つける",
+                  desc: "「ここはAIで効率化できますよ」を、業務全体から見つけ出します",
+                },
+                {
+                  title: "情報を追い続ける",
+                  desc: "日々進化するAI情報を常にキャッチアップ。あなたの代わりに追い続けます",
+                },
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-xl p-6 text-center">
+                  <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary-600 font-bold">{i + 1}</span>
+                  </div>
+                  <h4 className="font-bold text-text-heading mb-2">{item.title}</h4>
+                  <p className="text-sm text-text-muted leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-            <p>
-              5分かかっていたものを3分に短縮する。10分かかっていたものを5分で終わらせる。それでもAIはミスをする。
+          {/* 安心メッセージ */}
+          <div className="bg-[#43302b] rounded-[2rem] p-8 md:p-10 text-center text-white">
+            <p className="text-warm-200 mb-2">安心してください。</p>
+            <p className="text-2xl md:text-3xl font-bold font-rounded mb-4">
+              それ、全部AI顧問がやります。
             </p>
-
-            <p className="text-text-heading">
-              どうすれば、それを防ぐことができるだろう・・・<br/>
-              どうすれば、もっと早くできるだろう・・・<br/>
-              どうすれば、誰がやっても同じ質になるだろう・・・
-            </p>
-
-            <p>
-              <strong>最大の効率化とは、地味な改善の積み重ねです。</strong>アプリ導入や外注だけでは解決しません。「業務の分解」と「AIの適用可否」を判断し続ける専門家が必要なのです。
-            </p>
-
-            <p className="text-xl font-bold text-primary-600 text-center mt-10">
-              だから、「AI顧問」という答え。
+            <p className="text-warm-200 leading-relaxed">
+              情報収集も、業務の分解も、<br className="md:hidden" />
+              「どこにAIが使えるか」を見つけることも。<br/>
+              <span className="text-white font-medium">あなたは本業に集中してください。</span>
             </p>
           </div>
         </div>
