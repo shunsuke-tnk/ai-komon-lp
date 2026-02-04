@@ -107,12 +107,14 @@ const App: React.FC = () => {
           <div className="max-w-xl lg:max-w-2xl">
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-text-heading tracking-tight font-rounded mb-6">
-              <span className="inline-block relative whitespace-nowrap">
-                あなたに寄り添うAI顧問を、
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary-300/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" /></svg>
+              <span className="block">あなたに寄り添う</span>
+              <span className="block relative">
+                <span className="relative inline-block">
+                  AIの専門家を、
+                  <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary-300/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" /></svg>
+                </span>
               </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 inline-block mt-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 block mt-2">
                 月10万円で御社に。
               </span>
             </h1>
