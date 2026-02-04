@@ -128,7 +128,7 @@ const App: React.FC = () => {
                 無料AI活用診断に申し込む
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <p className="text-sm text-text-muted mt-2 pl-4">毎月3社限定・Zoom 30分</p>
+              <p className="text-sm text-text-muted mt-2 ml-12">毎月3社限定・Zoom 30分</p>
             </div>
 
             {/* Target Cards */}
