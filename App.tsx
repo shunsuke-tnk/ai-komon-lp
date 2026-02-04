@@ -687,7 +687,7 @@ const App: React.FC = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
           {/* Plan 1: 伴走プラン */}
-          <div className="bg-white rounded-[2.5rem] p-10 border border-base-200 shadow-lg relative">
+          <div className="bg-white rounded-[2.5rem] p-10 border border-base-200 shadow-lg relative flex flex-col">
             <div className="absolute top-6 right-6 bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full">まずは始めたい方</div>
             <h3 className="text-xl font-bold text-text-heading font-rounded">伴走プラン</h3>
             <p className="text-sm text-text-muted mt-2 h-10">AI専門家があなたの会社に</p>
@@ -699,21 +699,21 @@ const App: React.FC = () => {
                 <span className="text-text-muted">万円/月</span>
               </div>
             </div>
-            <ul className="space-y-4 text-sm mb-10">
+            <ul className="space-y-4 text-sm flex-1">
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> チャット相談 無制限</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> キックオフ/振り返りMTG</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 月次レポート</li>
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> 社員研修</li>
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> オーダーメイド開発</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300">
+            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 mt-10">
               <span className="group-hover:hidden">選択する</span>
               <span className="hidden group-hover:inline">これにする</span>
             </button>
           </div>
 
           {/* Plan 2: 自走プラン */}
-          <div className="bg-white rounded-[2.5rem] p-10 border border-base-200 shadow-lg relative">
+          <div className="bg-white rounded-[2.5rem] p-10 border border-base-200 shadow-lg relative flex flex-col">
             <div className="absolute top-6 right-6 bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full">スタッフを育てたい方</div>
             <h3 className="text-xl font-bold text-text-heading font-rounded">自走プラン</h3>
             <p className="text-sm text-text-muted mt-2 h-10">社内AI人材の育成まで支援</p>
@@ -725,20 +725,20 @@ const App: React.FC = () => {
                 <span className="text-text-muted">万円/月</span>
               </div>
             </div>
-            <ul className="space-y-4 text-sm mb-10">
+            <ul className="space-y-4 text-sm flex-1">
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 伴走プランの全内容</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 社員研修 (4名まで)</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 内製化支援</li>
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> オーダーメイド開発</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300">
+            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 mt-10">
               <span className="group-hover:hidden">選択する</span>
               <span className="hidden group-hover:inline">これにする</span>
             </button>
           </div>
 
           {/* Plan 3: エージェント開発 */}
-          <div className="bg-white rounded-[2.5rem] p-10 border border-base-200 shadow-lg relative">
+          <div className="bg-white rounded-[2.5rem] p-10 border border-base-200 shadow-lg relative flex flex-col">
             <div className="absolute top-6 right-6 bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full">専用ツールを作りたい方</div>
             <h3 className="text-xl font-bold text-text-heading font-rounded">エージェント開発</h3>
             <p className="text-sm text-text-muted mt-2 h-10">丸投げOK。オーダーメイド</p>
@@ -750,13 +750,13 @@ const App: React.FC = () => {
                 <span className="text-text-muted">万円/月</span>
               </div>
             </div>
-            <ul className="space-y-4 text-sm mb-10">
+            <ul className="space-y-4 text-sm flex-1">
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 要件整理</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 月1開発MTG</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> オーダーメイド開発</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> チャット相談(開発関連)</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300">
+            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 mt-10">
               <span className="group-hover:hidden">選択する</span>
               <span className="hidden group-hover:inline">これにする</span>
             </button>
