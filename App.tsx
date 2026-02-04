@@ -539,8 +539,8 @@ const App: React.FC = () => {
 
               {/* 結論 */}
               <div className="text-center pt-8 border-t border-primary-200">
-                <p className="text-text-muted text-lg leading-relaxed mb-3">
-                  業務量は圧倒的に増えたにも関わらず、
+                <p className="text-text-heading text-xl md:text-2xl font-bold leading-relaxed mb-6">
+                  <span className="underline decoration-primary-500 decoration-4 underline-offset-4">業務量は圧倒的に増えた</span>にも関わらず、
                 </p>
                 <p className="text-2xl md:text-3xl text-text-heading font-bold font-rounded leading-relaxed">
                   定時で帰ることができるようになったのです。
