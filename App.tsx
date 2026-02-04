@@ -218,27 +218,64 @@ const App: React.FC = () => {
             <span className="bg-primary-100 text-primary-800 px-4 py-1 rounded-full inline-block mt-2">AI導入に失敗</span>するのか
           </h2>
 
-          {/* 4つの失敗パターン - 横並び */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {[
-              { num: "01", text: "AIで何ができるか\nわからない" },
-              { num: "02", text: "情報更新が早すぎて\n追いきれない" },
-              { num: "03", text: "ツールを入れたけど\n使わなくなった" },
-              { num: "04", text: "一部だけ効率化して\n他は変わらない" },
-            ].map((item, i) => (
-              <div key={i} className="bg-warm-50 border border-warm-100 rounded-2xl p-5 text-center">
-                <span className="text-3xl font-bold text-warm-200 font-rounded">{item.num}</span>
-                <p className="text-text-body font-medium mt-2 text-sm leading-relaxed whitespace-pre-line">{item.text}</p>
+          {/* 成功企業 vs 失敗企業の対比 */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* 成功企業 */}
+            <div className="bg-primary-50 rounded-2xl p-6 md:p-8 border border-primary-100">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center text-lg">◎</span>
+                <h4 className="font-bold text-primary-800 text-lg font-rounded">AIを活用できている企業</h4>
               </div>
-            ))}
+              <ul className="space-y-3">
+                {[
+                  "見積書はAIが下書き → 確認して送信するだけ",
+                  "会議後、議事録がAIで自動生成される",
+                  "問い合わせ対応のテンプレをAIが作成",
+                  "月次レポートの集計・分析もAIにお任せ",
+                ].map((text, i) => (
+                  <li key={i} className="flex items-start gap-2 text-primary-700">
+                    <Check className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
+                    <span className="text-sm leading-relaxed">{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 失敗企業 */}
+            <div className="bg-base-50 rounded-2xl p-6 md:p-8 border border-base-200">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-8 h-8 bg-base-300 text-white rounded-full flex items-center justify-center text-lg">×</span>
+                <h4 className="font-bold text-text-heading text-lg font-rounded">うまくいかない企業</h4>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "見積書を1から手打ち。作成に2時間かかる",
+                  "会議後、手書きメモを見ながら議事録を作成",
+                  "同じ説明を何度もコピペ。微修正に時間を取られる",
+                  "Excelに手入力 → 集計も関数を組んで手動",
+                ].map((text, i) => (
+                  <li key={i} className="flex items-start gap-2 text-text-muted">
+                    <X className="w-5 h-5 text-base-300 shrink-0 mt-0.5" />
+                    <span className="text-sm leading-relaxed">{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* 共通点への導入 */}
+          <div className="text-center mb-8">
+            <p className="text-lg md:text-xl font-bold text-text-heading font-rounded">
+              うまくいかない企業には、<span className="text-primary-600">ある共通点</span>があります。
+            </p>
           </div>
 
           {/* 失敗のループ構造 */}
           <div className="mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center mb-10">
-              多くの会社が陥る「負のループ」
-            </h3>
             <div className="bg-base-50 rounded-[2rem] p-6 md:p-10 border border-base-200">
+              <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center mb-10">
+                多くの会社が陥る「負のループ」
+              </h3>
               {/* 上段 3つ */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative">
                 {[
