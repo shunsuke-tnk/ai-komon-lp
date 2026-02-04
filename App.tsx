@@ -255,8 +255,8 @@ const App: React.FC = () => {
                 {[
                   "経理処理はAIで自動仕訳",
                   "議事録はAIで自動生成",
-                  "問い合わせ対応をAIが下書き",
-                  "月次レポートもAIにお任せ",
+                  "入力作業はExcelに自動転記",
+                  "レポートはAIが自動作成",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3 text-primary-700">
                     <Check className="w-6 h-6 text-primary-500 shrink-0 mt-0.5" />
@@ -276,8 +276,8 @@ const App: React.FC = () => {
                 {[
                   "経理処理を1件ずつ手入力",
                   "議事録を手書きメモから作成",
-                  "同じ説明を何度もコピペ",
                   "Excelに手入力して手動で集計",
+                  "手書きのメモから転記",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3 text-text-body">
                     <X className="w-6 h-6 text-base-500 shrink-0 mt-0.5" />
