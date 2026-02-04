@@ -931,28 +931,28 @@ const App: React.FC = () => {
       {/* ==================== NEXT STEP / CTA SECTION ==================== */}
       <Section background="white" className="!pt-10 !pb-20">
         <div className="max-w-5xl mx-auto relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-warm-500 rounded-[3.5rem] transform rotate-1 opacity-20 blur-3xl"></div>
-          <div className="bg-gradient-to-br from-[#43302b] to-[#2a1e1b] rounded-[3.5rem] p-10 md:p-24 text-center relative overflow-hidden shadow-2xl">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-300 to-primary-400 rounded-[3.5rem] transform rotate-1 opacity-20 blur-3xl"></div>
+          <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-[3.5rem] p-10 md:p-24 text-center relative overflow-hidden shadow-2xl border border-primary-200">
 
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-80 h-80 bg-primary-200/30 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none"></div>
 
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight font-rounded">
+              <h2 className="text-3xl md:text-5xl font-bold text-text-heading mb-8 leading-tight font-rounded">
                 まずは無料診断から
               </h2>
-              <p className="text-lg text-warm-100 mb-12 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-lg text-text-body mb-12 leading-relaxed max-w-2xl mx-auto">
                 「何を導入すべきかわからない」状態でOK。<br/>
                 現場の課題をお聞かせください。
               </p>
 
               <div className="flex flex-col items-center gap-6">
-                <Button size="xl" variant="brown" onClick={scrollToContact} className="w-full md:w-auto px-16 py-6 text-xl shadow-warm-900/50 ring-4 ring-white/10">
+                <Button size="xl" variant="primary" onClick={scrollToContact} className="w-full md:w-auto px-16 py-6 text-xl ring-4 ring-primary-200">
                   無料AI活用診断に申し込む
                   <ArrowRight className="ml-2" />
                 </Button>
-                <p className="text-sm text-warm-300">
+                <p className="text-sm text-text-muted">
                   毎月3社限定
                 </p>
               </div>
