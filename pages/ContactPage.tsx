@@ -23,8 +23,15 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setError('');
+
+    // 電話番号のバリデーション（入力されている場合のみ）
+    if (formData.phone && !formData.phone.includes('-')) {
+      setError('電話番号にハイフンをつけてください（例: 03-1234-5678）');
+      return;
+    }
+
+    setIsSubmitting(true);
 
     try {
       // Here you would integrate with Google Apps Script or EmailJS
