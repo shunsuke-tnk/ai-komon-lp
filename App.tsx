@@ -409,82 +409,142 @@ const App: React.FC = () => {
 
       {/* ==================== WHY ME / STORY SECTION ==================== */}
       <Section background="cream" id="story">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-3 block">My Story</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-heading leading-tight font-rounded">
-              なぜ、「伴走」にこだわるのか
-            </h2>
+        {/* セクションヘッダー */}
+        <div className="text-center mb-16 md:mb-20">
+          <span className="text-primary-500 font-medium tracking-widest text-sm uppercase mb-4 block">My Story</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-text-heading leading-tight font-rounded">
+            なぜ、「伴走」に<br className="md:hidden" />こだわるのか
+          </h2>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          {/* Part 1: 苦悩の時代 - 左テキスト / 右写真 */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24">
+            {/* 左: テキスト */}
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded mb-6">
+                残業だらけの営業時代
+              </h3>
+              <div className="space-y-5 text-lg text-text-body leading-relaxed">
+                <p>
+                  冒頭、トップセールスなどと大それたことを言いましたが、決してかっこいいものではなく、泥臭い道のりでした。
+                </p>
+                <p>
+                  あらゆることがアナログ。手書きでメモし、大量にコピーし、手入力を繰り返す・・・
+                </p>
+                <p className="text-xl font-bold text-text-heading">
+                  毎日0時を超えるのが当たり前でした。
+                </p>
+                <p>
+                  見積もり作成に2時間以上。原価表すらなく、FAXを照らし合わせて原価を調べる。朝から晩まで現場に出て、帰社してから事務作業。どれだけ頑張っても0時より早く帰れない。
+                </p>
+              </div>
+            </div>
+            {/* 右: 写真 */}
+            <div className="order-1 md:order-2">
+              <div className="aspect-[4/3] bg-gradient-to-br from-base-200 to-base-300 rounded-2xl flex items-center justify-center overflow-hidden">
+                {/* 写真プレースホルダー - 後で実際の画像に差し替え */}
+                <div className="text-center text-base-400">
+                  <Clock className="w-16 h-16 mx-auto mb-3 opacity-50" />
+                  <p className="text-sm">残業イメージ写真</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-lg">
-            <div className="prose prose-lg max-w-none text-text-body leading-relaxed">
-
-              <h3 className="text-2xl font-bold text-text-heading font-rounded mt-0">残業だらけの営業時代</h3>
-
-              <p>
-                冒頭、トップセールスなどと大それたことを言いましたが、決してかっこいいものではなく、泥臭い道のりでした。
+          {/* 転換点 - ドラマティックな引用（全幅） */}
+          <div className="bg-[#43302b] rounded-3xl py-12 md:py-16 px-8 mb-16 md:mb-24">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-2xl md:text-4xl font-bold text-white leading-snug font-rounded">
+                「このままじゃ一生<br />残業地獄から抜け出せない。」
               </p>
-
-              <p>
-                あらゆることがアナログ。手書きでメモし、大量にコピーし、手入力を繰り返す・・・<strong>毎日0時を超えるのが当たり前でした。</strong>
+              <p className="text-warm-300 mt-6 text-lg">
+                そう気づいた日から、すべてが変わり始めた。
               </p>
+            </div>
+          </div>
 
-              <p>
-                見積もり作成に2時間以上。原価表すらなく、FAXを照らし合わせて原価を調べる。朝から晩まで現場に出て、帰社してから事務作業。どれだけ頑張っても0時より早く帰れない。
+          {/* Part 2: 行動と改善 - 左写真 / 右テキスト */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24">
+            {/* 左: 写真 */}
+            <div>
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center overflow-hidden">
+                {/* 写真プレースホルダー - 後で実際の画像に差し替え */}
+                <div className="text-center text-primary-400">
+                  <Settings className="w-16 h-16 mx-auto mb-3 opacity-50" />
+                  <p className="text-sm">効率化イメージ写真</p>
+                </div>
+              </div>
+            </div>
+            {/* 右: テキスト */}
+            <div>
+              <div className="space-y-5 text-lg text-text-body leading-relaxed">
+                <p>
+                  そう気づいた日から、来る日も来る日も効率化に取り掛かりました。
+                </p>
+                <p>
+                  提案資料は、選ぶだけで自動で完成するようにしました。原価表は、全て仕様書も含めて見積書と連動するように改善。見積もりシステムを自作し、数量を入れるだけで6種類の見積書が完成し、契約処理まで行えるものになりました。
+                </p>
+                <p>
+                  誰が使っても使いやすいものにするために、完成後も何十回も修正を繰り返しました。
+                </p>
+              </div>
+
+              {/* 成果のハイライト */}
+              <div className="mt-8 bg-primary-500 rounded-2xl py-6 px-8 text-white">
+                <p className="text-sm opacity-80 tracking-widest uppercase mb-2">Result</p>
+                <div className="flex items-center gap-4">
+                  <p className="text-2xl font-bold font-rounded line-through opacity-60">2時間</p>
+                  <ArrowRight className="w-6 h-6 opacity-80" />
+                  <p className="text-3xl font-bold font-rounded">15分</p>
+                </div>
+                <p className="text-sm opacity-90 mt-1">見積もり作成時間を87%削減</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Part 3: 感情的クライマックス（中央寄せ） */}
+          <div className="max-w-2xl mx-auto text-center mb-16 md:mb-20">
+            <p className="text-xl md:text-2xl font-bold text-text-heading leading-relaxed mb-8">
+              決して、かっこいいものじゃなかった。
+            </p>
+
+            <div className="my-12 md:my-16">
+              <p className="text-2xl md:text-4xl text-text-heading leading-relaxed font-rounded">
+                それを教えてくれる人が、<br />
+                僕の横にいたら<br />
+                <span className="text-primary-600 font-bold">どれだけ楽だっただろう・・・。</span>
               </p>
+            </div>
 
-              <p className="text-xl font-bold text-text-heading my-8 text-center">
-                「このままじゃ一生残業地獄から抜け出せない。」
+            <p className="text-lg text-text-body leading-relaxed">
+              そんな想いから、このサービスを作りました。
+            </p>
+          </div>
+
+          {/* Part 4: 使命（中央寄せ） */}
+          <div className="max-w-2xl mx-auto mb-16">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-primary-100">
+              <p className="text-lg md:text-xl text-text-heading leading-relaxed text-center">
+                AIに詳しいだけではありません。<br />
+                <span className="font-bold text-primary-700">現場の痛みと、それを乗り越える泥臭いプロセスを知っています。</span>
               </p>
-
-              <p>
-                そう気づいた日から、来る日も来る日も効率化に取り掛かりました。
+              <p className="text-lg text-text-body leading-relaxed text-center mt-6">
+                だから、一時的な代行ではなく、<br />
+                現場に定着するまで<span className="text-primary-600 font-bold">「伴走」</span>するサービスを。
               </p>
-
-              <p>
-                提案資料は、選ぶだけで自動で完成するようにしました。原価表は、全て仕様書も含めて見積書と連動するように改善。見積もりシステムを自作し、数量を入れるだけで6種類の見積書が完成し、契約処理まで行えるものになりました。
-              </p>
-
-              <p>
-                誰が使っても使いやすいものにするために、完成後も何十回も修正を繰り返しました。
-              </p>
-
-              <p className="text-xl font-bold text-primary-600">
-                その結果、見積もり作成にかかる時間は2時間から15分まで短縮しました。
-              </p>
-
-              <hr className="my-8 border-base-200" />
-
-              <p className="text-xl font-bold text-text-heading">
-                決して、かっこいいものじゃなかった。
-              </p>
-
-              <p className="text-lg text-text-heading leading-relaxed">
-                それを教えてくれる人が、僕の横にいたら<br/>
-                <strong>どれだけ楽だっただろう・・・。</strong>
-              </p>
-
-              <p>
-                そんな想いから、このサービスを作りました。
-              </p>
-
-              <p>
-                AIに詳しいだけではありません。<strong>現場の痛みと、それを乗り越える泥臭いプロセスを知っています。</strong>だから、一時的な代行ではなく、現場に定着するまで「伴走」するサービスを。
-              </p>
-
             </div>
           </div>
 
           {/* Before/After Results */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: "見積もり作成", before: "2時間", after: "15分" },
               { label: "勤務時間", before: "0時残業", after: "定時帰り" },
               { label: "セールス実績", before: "-", after: "全国トップ複数回" },
               { label: "会社実績", before: "-", after: "過去最高売上" },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-xl p-4 text-center shadow-sm">
+              <div key={i} className="bg-white rounded-xl p-4 text-center shadow-sm border border-base-100">
                 <p className="text-xs text-text-muted mb-1">{item.label}</p>
                 <p className="text-sm text-base-400 line-through">{item.before}</p>
                 <p className="text-lg font-bold text-primary-600 font-rounded">{item.after}</p>
