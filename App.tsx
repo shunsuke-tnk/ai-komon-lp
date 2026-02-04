@@ -105,67 +105,62 @@ const App: React.FC = () => {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="max-w-xl lg:max-w-2xl">
-            {/* Animated Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-primary-200 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700 mb-8">
-              <span className="flex h-2.5 w-2.5 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-500"></span>
-              </span>
-              <span className="text-sm font-bold text-warm-800 tracking-wide font-rounded">AI PARTNER & ADVISOR</span>
-            </div>
-
             {/* Main Heading */}
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-text-heading tracking-tight font-rounded mb-6">
-              <span className="inline-block relative">
-                現場を知るAI顧問が、
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-text-heading tracking-tight font-rounded mb-6">
+              <span className="inline-block relative whitespace-nowrap">
+                あなたに寄り添うAI顧問を、
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary-300/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" /></svg>
               </span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 inline-block mt-2">
-                月10万円で御社に
+                月10万円で御社に。
               </span>
             </h1>
 
             <p className="text-lg text-text-body font-medium leading-relaxed mb-8">
-              実務の現場を知り尽くしたAI専門家が、<br/>
-              御社のAI活用を0から伴走支援します。
+              「AIのこと、誰に聞けば・・・」は、もう終わり。<br/>
+              専門家が御社のAI活用を0から伴走支援します。
             </p>
 
-            {/* Authority Badges */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              <span className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold text-text-body border border-white/50">
-                <Award className="w-4 h-4 text-primary-500" />
-                複数回全国トップセールス獲得
-              </span>
-              <span className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold text-text-body border border-white/50">
-                <TrendingUp className="w-4 h-4 text-primary-500" />
-                5年連続 個人年間売上2億円
-              </span>
-            </div>
-
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-5 mb-2">
+            <div className="mb-8">
               <Button size="xl" variant="primary" onClick={scrollToContact} className="shadow-primary-200/50">
                 無料AI活用診断に申し込む
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+              <p className="text-sm text-text-muted mt-2 pl-4">毎月3社限定・Zoom 30分</p>
             </div>
-            <p className="text-sm text-text-muted mb-8">毎月3社限定・Zoom 30分</p>
 
             {/* Target Cards */}
             <div className="pt-8 border-t border-primary-200/60">
-              <p className="text-sm font-bold text-text-muted mb-4">こんな方におすすめ</p>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  "AIを使いたいが何から始めればいいかわからない",
-                  "書類作成・記録業務の時間を短縮したい",
-                  "若手にAIを教えられる人がいない"
-                ].map((text, i) => (
-                  <span key={i} className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-text-body">
-                    <Check className="w-4 h-4 text-primary-500" />
-                    {text}
+              <p className="text-sm font-bold text-text-muted mb-3">こんな方におすすめ</p>
+              <div className="space-y-2">
+                <div className="grid grid-cols-2 gap-2">
+                  <span className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-3 py-2 rounded-lg text-sm text-text-body">
+                    <Check className="w-4 h-4 text-primary-500 shrink-0" />
+                    何から始めればいいかわからない
                   </span>
-                ))}
+                  <span className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-3 py-2 rounded-lg text-sm text-text-body">
+                    <Check className="w-4 h-4 text-primary-500 shrink-0" />
+                    書類・記録業務の時間を短縮したい
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <span className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-3 py-2 rounded-lg text-sm text-text-body">
+                    <Check className="w-4 h-4 text-primary-500 shrink-0" />
+                    若手にAIを教えられる人がいない
+                  </span>
+                  <span className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-3 py-2 rounded-lg text-sm text-text-body">
+                    <Check className="w-4 h-4 text-primary-500 shrink-0" />
+                    AIは入れたが定着しない
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <span className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-3 py-2 rounded-lg text-sm text-text-body">
+                    <Check className="w-4 h-4 text-primary-500 shrink-0" />
+                    情報更新が早すぎてついていけない
+                  </span>
+                </div>
               </div>
             </div>
           </div>
