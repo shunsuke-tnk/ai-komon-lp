@@ -504,25 +504,47 @@ const App: React.FC = () => {
           </div>
 
           {/* 成果ハイライト - 全幅 */}
-          <div className="bg-primary-500 rounded-3xl py-12 md:py-16 px-8 md:px-12 mb-20 md:mb-28">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-white/80 text-sm tracking-widest uppercase mb-6 text-center">Result</p>
-              <div className="space-y-4 text-white text-center">
-                <p className="text-xl md:text-2xl leading-relaxed">
-                  これにより、<span className="font-bold">5年連続で個人年間売上2億円</span>を維持しながら、
+          <div className="bg-[#1a2e3b] rounded-3xl py-12 md:py-16 px-8 md:px-12 mb-20 md:mb-28">
+            <div className="max-w-4xl mx-auto">
+              {/* ストーリーの導入 */}
+              <div className="text-center mb-10 md:mb-12">
+                <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-4">
+                  身の回りを端から端まで効率化した結果、
                 </p>
-                <p className="text-xl md:text-2xl leading-relaxed">
-                  マーケティング業務全てを担い、
+                <p className="text-white text-xl md:text-2xl font-bold leading-relaxed">
+                  営業の仕事をこなしながら、<br className="md:hidden" />
+                  これだけのことを同時にできるようになりました。
                 </p>
-                <p className="text-xl md:text-2xl leading-relaxed font-bold">
-                  創業40年の会社で過去最高集客数・過去最高売上を達成。
-                </p>
-                <div className="pt-6">
-                  <p className="text-2xl md:text-3xl font-bold font-rounded">
-                    業務量は圧倒的に増えたにも関わらず、<br />
-                    定時で帰ることができるようになったのです。
-                  </p>
+              </div>
+
+              {/* 達成項目リスト */}
+              <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-10">
+                <div className="bg-white/10 rounded-xl p-5 md:p-6">
+                  <p className="text-white/60 text-sm mb-2">営業成績</p>
+                  <p className="text-white text-lg md:text-xl font-bold">5年連続で個人年間売上2億円を維持</p>
                 </div>
+                <div className="bg-white/10 rounded-xl p-5 md:p-6">
+                  <p className="text-white/60 text-sm mb-2">マーケティング</p>
+                  <p className="text-white text-lg md:text-xl font-bold">Web制作・チラシ作成など全業務を担当</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5 md:p-6">
+                  <p className="text-white/60 text-sm mb-2">会社への貢献</p>
+                  <p className="text-white text-lg md:text-xl font-bold">創業40年で過去最高集客数・最高売上を達成</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5 md:p-6">
+                  <p className="text-white/60 text-sm mb-2">外部活動</p>
+                  <p className="text-white text-lg md:text-xl font-bold">経営塾でAI講座を担当・AIコンサルも実施</p>
+                </div>
+              </div>
+
+              {/* 結論 */}
+              <div className="text-center border-t border-white/20 pt-8">
+                <p className="text-white/80 text-lg leading-relaxed mb-3">
+                  業務量は圧倒的に増えたにも関わらず、
+                </p>
+                <p className="text-xl md:text-2xl text-white font-bold font-rounded leading-relaxed">
+                  定時で帰ることができるようになったのです。
+                </p>
               </div>
             </div>
           </div>
