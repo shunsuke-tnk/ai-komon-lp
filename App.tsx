@@ -679,7 +679,7 @@ const App: React.FC = () => {
 
       {/* ==================== PRICING SECTION ==================== */}
       <Section background="warm" id="pricing" decoration>
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-3 block">PLANS</span>
           <h2 className="text-3xl md:text-4xl font-bold text-text-heading font-rounded">御社に最適なプランを</h2>
           <p className="text-text-muted mt-4">モニター価格で提供中</p>
@@ -737,10 +737,10 @@ const App: React.FC = () => {
             </button>
           </div>
 
-          {/* Plan 3: エージェント開発 */}
+          {/* Plan 3: 開発プラン */}
           <div className="bg-white rounded-[2.5rem] p-10 border border-base-200 shadow-lg relative flex flex-col">
             <div className="absolute top-6 right-6 bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full">専用ツールを作りたい方</div>
-            <h3 className="text-xl font-bold text-text-heading font-rounded">エージェント開発</h3>
+            <h3 className="text-xl font-bold text-text-heading font-rounded">開発プラン</h3>
             <p className="text-sm text-text-muted mt-2 h-10">丸投げOK。オーダーメイド</p>
             <div className="my-8">
               <span className="text-base-400 line-through text-lg">60万円</span>
