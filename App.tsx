@@ -306,27 +306,27 @@ const App: React.FC = () => {
                 {[
                   {
                     num: "1",
-                    title: "AIにできることがわからない",
+                    title: "AIにできることが\nわからない",
                     desc: "ChatGPTは知っているけど、自社業務にどう活かせるか見当がつかない",
                   },
                   {
                     num: "2",
-                    title: "情報更新が早すぎて追いきれない",
+                    title: "情報更新が早すぎて\n追いきれない",
                     desc: "毎週のように新しいツールが出て、どれを使えばいいかわからない",
                   },
                   {
                     num: "3",
-                    title: "諦めて情報収集をやめる",
+                    title: "諦めて情報収集を\nやめてしまう",
                     desc: "忙しい日常業務の中で、AI情報を追うことを後回しにしてしまう",
                   },
                 ].map((item, i) => (
                   <div key={i} className="relative">
-                    <div className="bg-white rounded-2xl p-5 border border-base-100 shadow-sm h-full">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="w-7 h-7 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-bold">{item.num}</span>
-                        <h4 className="font-bold text-text-heading text-base leading-tight">{item.title}</h4>
+                    <div className="bg-white rounded-2xl p-6 border border-base-100 shadow-sm h-full">
+                      <div className="flex items-start gap-3 mb-3">
+                        <span className="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-base font-bold shrink-0">{item.num}</span>
+                        <h4 className="font-bold text-text-heading text-lg leading-snug whitespace-pre-line">{item.title}</h4>
                       </div>
-                      <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-text-muted text-base leading-relaxed">{item.desc}</p>
                     </div>
                     {/* 横矢印（1→2, 2→3） */}
                     {i < 2 && (
@@ -348,27 +348,27 @@ const App: React.FC = () => {
                 {[
                   {
                     num: "6",
-                    title: "効果を実感できず、使わなくなる",
+                    title: "効果を実感できず、\n使わなくなる",
                     desc: "結局「AIは難しい」という結論になり、元の業務に戻ってしまう",
                   },
                   {
                     num: "5",
-                    title: "他の業務への応用が思いつかない",
+                    title: "他の業務への応用が\n思いつかない",
                     desc: "自社の業務フローのどこにAIが使えるのか、発想が広がらない",
                   },
                   {
                     num: "4",
-                    title: "知識が「議事録要約」など一部で止まる",
+                    title: "「議事録要約」など、\n活用が限定的",
                     desc: "試しに使ってみたものの、それ以上の活用方法が見つからない",
                   },
                 ].map((item, i) => (
                   <div key={i} className="relative">
-                    <div className={`bg-white rounded-2xl p-5 border shadow-sm h-full ${item.num === "6" ? "border-red-200 bg-red-50/30" : "border-base-100"}`}>
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${item.num === "6" ? "bg-red-100 text-red-500" : "bg-primary-100 text-primary-600"}`}>{item.num}</span>
-                        <h4 className={`font-bold text-base leading-tight ${item.num === "6" ? "text-red-600" : "text-text-heading"}`}>{item.title}</h4>
+                    <div className={`bg-white rounded-2xl p-6 border shadow-sm h-full ${item.num === "6" ? "border-red-200 bg-red-50/30" : "border-base-100"}`}>
+                      <div className="flex items-start gap-3 mb-3">
+                        <span className={`w-8 h-8 rounded-full flex items-center justify-center text-base font-bold shrink-0 ${item.num === "6" ? "bg-red-100 text-red-500" : "bg-primary-100 text-primary-600"}`}>{item.num}</span>
+                        <h4 className={`font-bold text-lg leading-snug whitespace-pre-line ${item.num === "6" ? "text-red-600" : "text-text-heading"}`}>{item.title}</h4>
                       </div>
-                      <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-text-muted text-base leading-relaxed">{item.desc}</p>
                     </div>
                     {/* 横矢印（6←5, 5←4）右から左なので、左に矢印 */}
                     {i < 2 && (
