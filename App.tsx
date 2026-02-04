@@ -106,15 +106,15 @@ const App: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="max-w-xl lg:max-w-2xl">
             {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-text-heading tracking-tight font-rounded mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-heading tracking-tight font-rounded mb-6 space-y-2">
               <span className="block">あなたに寄り添う</span>
               <span className="block relative">
                 <span className="relative inline-block">
-                  AIの専門家を、
+                  AI専門家を
                   <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary-300/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" /></svg>
                 </span>
               </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 block mt-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 block">
                 月10万円で御社に。
               </span>
             </h1>
@@ -144,7 +144,7 @@ const App: React.FC = () => {
                   </span>
                   <span className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-3 py-2 rounded-lg text-sm text-text-body">
                     <Check className="w-4 h-4 text-primary-500 shrink-0" />
-                    書類・記録業務の時間を短縮したい
+                    事務作業の時間を減らしたい
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
