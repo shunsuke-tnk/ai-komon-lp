@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { Section } from '../components/Section';
 import { Button } from '../components/Button';
@@ -21,6 +21,14 @@ const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const errorRef = useRef<HTMLDivElement>(null);
+
+  // エラー時に自動スクロール
+  useEffect(() => {
+    if (error && errorRef.current) {
+      errorRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [error]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -145,30 +153,36 @@ const ContactPage: React.FC = () => {
         </div>
       </header>
 
-      <Section background="cream" decoration className="pt-36 pb-24 lg:pt-48 lg:pb-36">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-3 block">CONTACT</span>
-            <h1 className="text-3xl md:text-4xl font-bold text-text-heading mb-4 font-rounded">
+      <Section background="cream" decoration className="pt-32 pb-16 lg:pt-40 lg:pb-24">
+        <div className="max-w-xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-2 block">CONTACT</span>
+            <h1 className="text-2xl md:text-3xl font-bold text-text-heading mb-3 font-rounded">
               無料AI活用診断
             </h1>
-            <p className="text-text-body">
+            <p className="text-sm text-text-body">
               以下のフォームにご記入ください。<br />
               営業日24時間以内にご連絡いたします。
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-white">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-white">
             {error && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-2xl text-red-600 text-sm">
+              <div
+                ref={errorRef}
+                className="mb-4 p-3 bg-red-50 border-2 border-red-300 rounded-xl text-red-600 text-sm font-medium flex items-center gap-2 animate-pulse"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                </svg>
                 {error}
               </div>
             )}
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Company Name */}
               <div>
-                <label htmlFor="companyName" className="block text-sm font-bold text-text-heading mb-2">
+                <label htmlFor="companyName" className="block text-sm font-bold text-text-heading mb-1.5">
                   会社名 <span className="text-primary-500">*</span>
                 </label>
                 <input
@@ -178,14 +192,14 @@ const ContactPage: React.FC = () => {
                   required
                   value={formData.companyName}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body"
+                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="株式会社〇〇建設"
                 />
               </div>
 
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-bold text-text-heading mb-2">
+                <label htmlFor="name" className="block text-sm font-bold text-text-heading mb-1.5">
                   お名前 <span className="text-primary-500">*</span>
                 </label>
                 <input
@@ -195,14 +209,14 @@ const ContactPage: React.FC = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body"
+                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="山田 太郎"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-bold text-text-heading mb-2">
+                <label htmlFor="email" className="block text-sm font-bold text-text-heading mb-1.5">
                   メールアドレス <span className="text-primary-500">*</span>
                 </label>
                 <input
@@ -212,14 +226,14 @@ const ContactPage: React.FC = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body"
+                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="example@company.co.jp"
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-bold text-text-heading mb-2">
+                <label htmlFor="phone" className="block text-sm font-bold text-text-heading mb-1.5">
                   電話番号
                 </label>
                 <input
@@ -228,15 +242,15 @@ const ContactPage: React.FC = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body"
+                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="03-1234-5678"
                 />
-                <p className="text-xs text-text-muted mt-2">※ ハイフン付きで入力してください（例: 03-1234-5678）</p>
+                <p className="text-xs text-text-muted mt-1">※ ハイフン付きで入力してください</p>
               </div>
 
               {/* Plan */}
               <div>
-                <label htmlFor="plan" className="block text-sm font-bold text-text-heading mb-2">
+                <label htmlFor="plan" className="block text-sm font-bold text-text-heading mb-1.5">
                   ご検討中のプラン
                 </label>
                 <select
@@ -244,7 +258,7 @@ const ContactPage: React.FC = () => {
                   name="plan"
                   value={formData.plan}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body bg-white"
+                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm bg-white"
                 >
                   <option value="">選択してください</option>
                   <option value="banso">伴走プラン（10万円/月）</option>
@@ -256,38 +270,38 @@ const ContactPage: React.FC = () => {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-bold text-text-heading mb-2">
+                <label htmlFor="message" className="block text-sm font-bold text-text-heading mb-1.5">
                   ご相談内容・ご質問など
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
+                  rows={3}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm resize-none"
                   placeholder="現在のお悩みや、ご質問があればご記入ください"
                 />
               </div>
 
               {/* Submit Button */}
-              <div className="pt-4">
+              <div className="pt-2">
                 <Button
                   type="submit"
                   variant="primary"
-                  size="xl"
+                  size="lg"
                   className="w-full"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
                       送信中...
                     </>
                   ) : (
                     <>
                       無料相談を申し込む
-                      <Send className="w-5 h-5 ml-2" />
+                      <Send className="w-4 h-4 ml-2" />
                     </>
                   )}
                 </Button>
@@ -299,9 +313,9 @@ const ContactPage: React.FC = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-base-200 py-10">
+      <footer className="bg-white border-t border-base-200 py-6">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-text-muted text-sm mb-2">株式会社ノヴァリス</p>
+          <p className="text-text-muted text-sm mb-1">株式会社ノヴァリス</p>
           <p className="text-text-muted text-xs">
             &copy; 2024 AI Advisor Service. All rights reserved.
           </p>
