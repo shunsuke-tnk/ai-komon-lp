@@ -458,14 +458,10 @@ const App: React.FC = () => {
           </div>
 
           {/* 転換点 - ドラマティックな引用（全幅） */}
-          <div className="bg-[#43302b] rounded-3xl py-14 md:py-20 px-8 md:px-12 mb-20 md:mb-28">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-2xl md:text-4xl font-bold text-white leading-snug font-rounded mb-8">
-                「このままじゃ、一生<br className="md:hidden" />残業地獄から抜け出せない。」
-              </p>
-              <p className="text-warm-200 text-lg leading-relaxed">
-                この頃、世の中にChatGPT3.5が登場し、騒がれ始めました。<br />
-                私は「これしかない！」と思い、死に物狂いでAIを学びました。
+          <div className="bg-[#43302b] rounded-3xl py-14 md:py-20 px-6 md:px-12 mb-20 md:mb-28">
+            <div className="mx-auto text-center">
+              <p className="text-lg md:text-4xl font-bold text-white leading-snug font-rounded whitespace-nowrap">
+                「このままじゃ、一生残業地獄から抜け出せない。」
               </p>
             </div>
           </div>
@@ -485,16 +481,19 @@ const App: React.FC = () => {
             <div>
               <div className="space-y-6 text-lg text-text-body leading-[1.9]">
                 <p>
-                  0時に作業が終わった後、深夜に時間を作り、来る日も来る日も効率化に取り掛かりました。
+                  この頃、世の中にChatGPTが登場し、騒がれ始めていました。私は「これしかない！」と思い、死に物狂いでAIを学んだのです。
                 </p>
                 <p>
-                  提案資料は選ぶだけで自動で完成するようにしました。
+                  0時に作業が終わった後、深夜に時間を作り、来る日も来る日も効率化に取り掛かる日々。
                 </p>
                 <p>
-                  見積もりシステムを自作し、数量を入れれば自動でたった10分で6種類の見積書が完成し、契約処理まで終えられるものになりました。
+                  提案資料は選ぶだけで自動で完成するように。
                 </p>
                 <p>
-                  その他、経理処理、売り上げデータ管理、報告書、顧客管理など...とにかく目につくものを片っ端から直しました。
+                  見積もりシステムを自作し、数量を入れれば自動でたった10分で6種類の見積書が完成、契約処理まで終えられるものに。
+                </p>
+                <p>
+                  その他、経理処理、売り上げデータ管理、報告書、顧客管理など...とにかく目につくものを片っ端から直していく。
                 </p>
                 <p className="font-bold text-text-heading">
                   少なくとも50ファイル以上。<br />
