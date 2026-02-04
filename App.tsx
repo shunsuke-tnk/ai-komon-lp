@@ -244,44 +244,44 @@ const App: React.FC = () => {
           </h2>
 
           {/* 成功企業 vs 失敗企業の対比 */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* 成功企業 */}
-            <div className="bg-primary-50 rounded-2xl p-6 md:p-8 border border-primary-100">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center text-lg">◎</span>
-                <h4 className="font-bold text-primary-800 text-lg font-rounded">AIを活用できている企業</h4>
+            <div className="bg-primary-50 rounded-[2rem] p-8 md:p-10 border-2 border-primary-200 shadow-lg shadow-primary-100/50">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">◎</span>
+                <h4 className="font-bold text-primary-800 text-xl md:text-2xl font-rounded">AIを活用できている企業</h4>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-5">
                 {[
-                  "見積書はAIが下書き → 確認して送信するだけ",
-                  "会議後、議事録がAIで自動生成される",
-                  "問い合わせ対応のテンプレをAIが作成",
-                  "月次レポートの集計・分析もAIにお任せ",
+                  "経理処理はAIで自動仕訳",
+                  "議事録はAIで自動生成",
+                  "問い合わせ対応をAIが下書き",
+                  "月次レポートもAIにお任せ",
                 ].map((text, i) => (
-                  <li key={i} className="flex items-start gap-2 text-primary-700">
-                    <Check className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
-                    <span className="text-sm leading-relaxed">{text}</span>
+                  <li key={i} className="flex items-start gap-3 text-primary-700">
+                    <Check className="w-6 h-6 text-primary-500 shrink-0 mt-0.5" />
+                    <span className="text-base md:text-lg leading-relaxed font-medium">{text}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* 失敗企業 */}
-            <div className="bg-base-50 rounded-2xl p-6 md:p-8 border border-base-200">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-8 h-8 bg-base-300 text-white rounded-full flex items-center justify-center text-lg">×</span>
-                <h4 className="font-bold text-text-heading text-lg font-rounded">うまくいかない企業</h4>
+            <div className="bg-base-50 rounded-[2rem] p-8 md:p-10 border-2 border-base-200 shadow-lg shadow-base-100/50">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="w-12 h-12 bg-base-300 text-white rounded-full flex items-center justify-center text-2xl font-bold">×</span>
+                <h4 className="font-bold text-text-heading text-xl md:text-2xl font-rounded">うまくいかない企業</h4>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-5">
                 {[
-                  "見積書を1から手打ち。作成に2時間かかる",
-                  "会議後、手書きメモを見ながら議事録を作成",
-                  "同じ説明を何度もコピペ。微修正に時間を取られる",
-                  "Excelに手入力 → 集計も関数を組んで手動",
+                  "経理処理を1件ずつ手入力",
+                  "議事録を手書きメモから作成",
+                  "同じ説明を何度もコピペ",
+                  "Excelに手入力して手動で集計",
                 ].map((text, i) => (
-                  <li key={i} className="flex items-start gap-2 text-text-muted">
-                    <X className="w-5 h-5 text-base-300 shrink-0 mt-0.5" />
-                    <span className="text-sm leading-relaxed">{text}</span>
+                  <li key={i} className="flex items-start gap-3 text-text-body">
+                    <X className="w-6 h-6 text-base-500 shrink-0 mt-0.5" />
+                    <span className="text-base md:text-lg leading-relaxed font-medium">{text}</span>
                   </li>
                 ))}
               </ul>
@@ -289,8 +289,8 @@ const App: React.FC = () => {
           </div>
 
           {/* 共通点への導入 */}
-          <div className="text-center mb-8">
-            <p className="text-lg md:text-xl font-bold text-text-heading font-rounded">
+          <div className="text-center pt-4 pb-12 md:pb-16">
+            <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded">
               うまくいかない企業には、<span className="text-primary-600">ある共通点</span>があります。
             </p>
           </div>
