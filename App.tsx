@@ -67,7 +67,7 @@ const App: React.FC = () => {
                 <button onClick={() => scrollToSection('pricing')} className="hover:text-primary-600 transition-colors">料金プラン</button>
                 <button onClick={() => scrollToSection('faq')} className="hover:text-primary-600 transition-colors">FAQ</button>
               </nav>
-              <Button size="sm" variant="primary" onClick={scrollToContact} className="shadow-none ring-1 ring-white/50">
+              <Button size="sm" variant="primary" onClick={scrollToContact} className="shadow-none ring-1 ring-white/50 animate-none">
                 無料診断を予約
               </Button>
             </div>
@@ -89,7 +89,7 @@ const App: React.FC = () => {
             <button onClick={() => scrollToSection('story')} className="block py-3 px-4 rounded-xl hover:bg-warm-50 text-text-heading font-bold font-rounded text-left">実績</button>
             <button onClick={() => scrollToSection('pricing')} className="block py-3 px-4 rounded-xl hover:bg-warm-50 text-text-heading font-bold font-rounded text-left">料金プラン</button>
             <button onClick={() => scrollToSection('faq')} className="block py-3 px-4 rounded-xl hover:bg-warm-50 text-text-heading font-bold font-rounded text-left">FAQ</button>
-            <Button className="w-full mt-2" onClick={scrollToContact}>無料診断を予約</Button>
+            <Button className="w-full mt-2 animate-none" onClick={scrollToContact}>無料診断を予約</Button>
           </div>
         )}
       </header>
