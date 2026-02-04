@@ -246,12 +246,12 @@ const App: React.FC = () => {
           {/* 成功企業 vs 失敗企業の対比 */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* 成功企業 */}
-            <div className="bg-primary-50 rounded-[2rem] p-8 md:p-10 border-2 border-primary-200 shadow-lg shadow-primary-100/50">
-              <div className="flex items-center gap-3 mb-6">
+            <div className="bg-primary-50 rounded-[2rem] pl-6 pr-4 pt-6 pb-10 md:pl-8 md:pr-5 md:pt-8 md:pb-14 border-2 border-primary-200 shadow-lg shadow-primary-100/50">
+              <div className="flex items-center gap-3 mb-8">
                 <span className="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">◎</span>
                 <h4 className="font-bold text-primary-800 text-xl md:text-2xl font-rounded">AIを活用できている企業</h4>
               </div>
-              <ul className="space-y-5">
+              <ul className="space-y-6">
                 {[
                   "経理処理はAIで自動仕訳",
                   "議事録はAIで自動生成",
@@ -260,19 +260,19 @@ const App: React.FC = () => {
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3 text-primary-700">
                     <Check className="w-6 h-6 text-primary-500 shrink-0 mt-0.5" />
-                    <span className="text-base md:text-lg leading-relaxed font-medium">{text}</span>
+                    <span className="text-lg md:text-xl leading-relaxed font-medium">{text}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* 失敗企業 */}
-            <div className="bg-base-50 rounded-[2rem] p-8 md:p-10 border-2 border-base-200 shadow-lg shadow-base-100/50">
-              <div className="flex items-center gap-3 mb-6">
+            <div className="bg-base-50 rounded-[2rem] pl-6 pr-4 pt-6 pb-10 md:pl-8 md:pr-5 md:pt-8 md:pb-14 border-2 border-base-200 shadow-lg shadow-base-100/50">
+              <div className="flex items-center gap-3 mb-8">
                 <span className="w-12 h-12 bg-base-300 text-white rounded-full flex items-center justify-center text-2xl font-bold">×</span>
                 <h4 className="font-bold text-text-heading text-xl md:text-2xl font-rounded">うまくいかない企業</h4>
               </div>
-              <ul className="space-y-5">
+              <ul className="space-y-6">
                 {[
                   "経理処理を1件ずつ手入力",
                   "議事録を手書きメモから作成",
@@ -281,7 +281,7 @@ const App: React.FC = () => {
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3 text-text-body">
                     <X className="w-6 h-6 text-base-500 shrink-0 mt-0.5" />
-                    <span className="text-base md:text-lg leading-relaxed font-medium">{text}</span>
+                    <span className="text-lg md:text-xl leading-relaxed font-medium">{text}</span>
                   </li>
                 ))}
               </ul>
