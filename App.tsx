@@ -183,18 +183,18 @@ const App: React.FC = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* 左側: 男性 */}
-          <div className="hidden md:block absolute left-0 top-0 -translate-x-full pr-4 w-40 lg:w-48">
+          <div className="hidden md:block absolute left-0 top-8 -translate-x-1/2 w-52 lg:w-64">
             <img
-              src="/images/男性_悩む_考える.png"
+              src="/images/1.png"
               alt=""
               className="w-full h-auto object-contain"
             />
           </div>
 
           {/* 右側: 女性（少し下に配置） */}
-          <div className="hidden md:block absolute right-0 top-24 translate-x-full pl-4 w-40 lg:w-48">
+          <div className="hidden md:block absolute right-0 top-32 translate-x-1/2 w-52 lg:w-64">
             <img
-              src="/images/女性_悩む_考える.png"
+              src="/images/2.png"
               alt=""
               className="w-full h-auto object-contain"
             />
