@@ -1039,7 +1039,7 @@ const App: React.FC = () => {
               { icon: <MessageSquare className="w-5 h-5 md:w-6 md:h-6" />, title: "業務ヒアリング", desc: "御社の課題を把握" },
               { icon: <CheckCircle className="w-5 h-5 md:w-6 md:h-6" />, title: "改善点を提示", desc: "優先順位もお伝え" },
             ].map((item, i) => (
-              <div key={i} className="bg-primary-50 border border-primary-100 rounded-xl p-4 md:p-6">
+              <div key={i} className="bg-primary-100 border border-primary-200 rounded-xl p-4 md:p-6">
                 <div className="text-primary-500 flex justify-center mb-2">
                   {item.icon}
                 </div>
