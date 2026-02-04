@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Section } from '../components/Section';
 import { Button } from '../components/Button';
 import { Sun, ArrowLeft, Check, Send } from 'lucide-react';
+
+// EmailJS設定
+const EMAILJS_SERVICE_ID = 'service_ge0upmi';
+const EMAILJS_TEMPLATE_ID = 'template_ai0rsz2';
+const EMAILJS_PUBLIC_KEY = 'vx50aV6eOQr3aUKlJ';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -34,6 +40,7 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
+      // Google Sheetsに送信
       const response = await fetch('https://script.google.com/macros/s/AKfycbw1zMNsitPgh5WA-RH0QZZSNcXEmU8ncJdx6LrTolBRhnP5SWx84zglP4ighssGWAXXuA/exec', {
         method: 'POST',
         body: JSON.stringify(formData),
@@ -42,6 +49,32 @@ const ContactPage: React.FC = () => {
       if (!response.ok) {
         throw new Error('送信に失敗しました');
       }
+
+      // プラン名を日本語に変換
+      const planNames: { [key: string]: string } = {
+        'banso': '伴走プラン（10万円/月）',
+        'jiso': '自走プラン（30万円/月）',
+        'kaihatsu': '開発プラン（50万円/月）',
+        'undecided': 'まだ決めていない',
+        '': '未選択'
+      };
+
+      // EmailJSで自動返信メール送信
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          to_email: formData.email,
+          to_name: formData.name,
+          company_name: formData.companyName,
+          phone: formData.phone || '未入力',
+          plan: planNames[formData.plan] || formData.plan,
+          message: formData.message || 'なし',
+          email: formData.email,
+          calendar_link: 'https://calendar.app.google/N8cfmp62m55CpWcq7'
+        },
+        EMAILJS_PUBLIC_KEY
+      );
 
       setIsSubmitted(true);
     } catch (err) {
