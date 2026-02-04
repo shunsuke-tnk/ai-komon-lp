@@ -417,33 +417,38 @@ const App: React.FC = () => {
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          {/* Part 1: 苦悩の時代 - 左テキスト / 右写真 */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24">
+        <div className="max-w-5xl mx-auto">
+          {/* Part 1: 残業だらけの営業時代 - 左テキスト / 右写真 */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-20 md:mb-28">
             {/* 左: テキスト */}
             <div className="order-2 md:order-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded mb-8">
                 残業だらけの営業時代
               </h3>
-              <div className="space-y-5 text-lg text-text-body leading-relaxed">
+              <div className="space-y-6 text-lg text-text-body leading-[1.9]">
                 <p>
-                  冒頭、トップセールスなどと大それたことを言いましたが、決してかっこいいものではなく、泥臭い道のりでした。
+                  今でこそ「AI活用」「効率化」などと、大それたことを言っていますが、私のサラリーマン時代は決して格好よいものでもなく、ただただ泥臭い道のりでした。
                 </p>
                 <p>
-                  あらゆることがアナログ。手書きでメモし、大量にコピーし、手入力を繰り返す・・・
+                  あらゆることがアナログ。たくさん手書きでメモし、大量にコピーし、手入力を繰り返す。容量が悪く、頭より体を動かして覚える。
+                </p>
+                <p>
+                  それでも仕事が終わらなくて、<span className="font-bold text-text-heading">毎日0時を超えるのが当たり前でした。</span>
+                </p>
+                <p>
+                  おまけに当時の会社には、原価表すらなく、FAXの束から該当原価を調べては見積書に転記して電卓を叩く。現場から戻ってから事務作業を行い、見積書１枚作るのに2時間以上かかっていました。
                 </p>
                 <p className="text-xl font-bold text-text-heading">
-                  毎日0時を超えるのが当たり前でした。
+                  どれだけ頑張っても0時より早く帰れない。
                 </p>
                 <p>
-                  見積もり作成に2時間以上。原価表すらなく、FAXを照らし合わせて原価を調べる。朝から晩まで現場に出て、帰社してから事務作業。どれだけ頑張っても0時より早く帰れない。
+                  本当にそんな日々でした。
                 </p>
               </div>
             </div>
             {/* 右: 写真 */}
-            <div className="order-1 md:order-2">
+            <div className="order-1 md:order-2 md:sticky md:top-32">
               <div className="aspect-[4/3] bg-gradient-to-br from-base-200 to-base-300 rounded-2xl flex items-center justify-center overflow-hidden">
-                {/* 写真プレースホルダー - 後で実際の画像に差し替え */}
                 <div className="text-center text-base-400">
                   <Clock className="w-16 h-16 mx-auto mb-3 opacity-50" />
                   <p className="text-sm">残業イメージ写真</p>
@@ -453,23 +458,23 @@ const App: React.FC = () => {
           </div>
 
           {/* 転換点 - ドラマティックな引用（全幅） */}
-          <div className="bg-[#43302b] rounded-3xl py-12 md:py-16 px-8 mb-16 md:mb-24">
+          <div className="bg-[#43302b] rounded-3xl py-14 md:py-20 px-8 md:px-12 mb-20 md:mb-28">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-2xl md:text-4xl font-bold text-white leading-snug font-rounded">
-                「このままじゃ一生<br />残業地獄から抜け出せない。」
+              <p className="text-2xl md:text-4xl font-bold text-white leading-snug font-rounded mb-8">
+                「このままじゃ、一生<br className="md:hidden" />残業地獄から抜け出せない。」
               </p>
-              <p className="text-warm-300 mt-6 text-lg">
-                そう気づいた日から、すべてが変わり始めた。
+              <p className="text-warm-200 text-lg leading-relaxed">
+                この頃、世の中にChatGPT3.5が登場し、騒がれ始めました。<br />
+                私は「これしかない！」と思い、死に物狂いでAIを学びました。
               </p>
             </div>
           </div>
 
-          {/* Part 2: 行動と改善 - 左写真 / 右テキスト */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24">
+          {/* Part 2: 死に物狂いの効率化 - 左写真 / 右テキスト */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-20 md:mb-28">
             {/* 左: 写真 */}
-            <div>
+            <div className="md:sticky md:top-32">
               <div className="aspect-[4/3] bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                {/* 写真プレースホルダー - 後で実際の画像に差し替え */}
                 <div className="text-center text-primary-400">
                   <Settings className="w-16 h-16 mx-auto mb-3 opacity-50" />
                   <p className="text-sm">効率化イメージ写真</p>
@@ -478,78 +483,110 @@ const App: React.FC = () => {
             </div>
             {/* 右: テキスト */}
             <div>
-              <div className="space-y-5 text-lg text-text-body leading-relaxed">
+              <div className="space-y-6 text-lg text-text-body leading-[1.9]">
                 <p>
-                  そう気づいた日から、来る日も来る日も効率化に取り掛かりました。
+                  0時に作業が終わった後、深夜に時間を作り、来る日も来る日も効率化に取り掛かりました。
                 </p>
                 <p>
-                  提案資料は、選ぶだけで自動で完成するようにしました。原価表は、全て仕様書も含めて見積書と連動するように改善。見積もりシステムを自作し、数量を入れるだけで6種類の見積書が完成し、契約処理まで行えるものになりました。
+                  提案資料は選ぶだけで自動で完成するようにしました。
                 </p>
                 <p>
-                  誰が使っても使いやすいものにするために、完成後も何十回も修正を繰り返しました。
+                  見積もりシステムを自作し、数量を入れれば自動でたった10分で6種類の見積書が完成し、契約処理まで終えられるものになりました。
+                </p>
+                <p>
+                  その他、経理処理、売り上げデータ管理、報告書、顧客管理など...とにかく目につくものを片っ端から直しました。
+                </p>
+                <p className="font-bold text-text-heading">
+                  少なくとも50ファイル以上。<br />
+                  身の回りのすべてを、端から端まで効率化しました。
                 </p>
               </div>
+            </div>
+          </div>
 
-              {/* 成果のハイライト */}
-              <div className="mt-8 bg-primary-500 rounded-2xl py-6 px-8 text-white">
-                <p className="text-sm opacity-80 tracking-widest uppercase mb-2">Result</p>
-                <div className="flex items-center gap-4">
-                  <p className="text-2xl font-bold font-rounded line-through opacity-60">2時間</p>
-                  <ArrowRight className="w-6 h-6 opacity-80" />
-                  <p className="text-3xl font-bold font-rounded">15分</p>
+          {/* 成果ハイライト - 全幅 */}
+          <div className="bg-primary-500 rounded-3xl py-12 md:py-16 px-8 md:px-12 mb-20 md:mb-28">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-white/80 text-sm tracking-widest uppercase mb-6 text-center">Result</p>
+              <div className="space-y-4 text-white text-center">
+                <p className="text-xl md:text-2xl leading-relaxed">
+                  これにより、<span className="font-bold">5年連続で個人年間売上2億円</span>を維持しながら、
+                </p>
+                <p className="text-xl md:text-2xl leading-relaxed">
+                  マーケティング業務全てを担い、
+                </p>
+                <p className="text-xl md:text-2xl leading-relaxed font-bold">
+                  創業40年の会社で過去最高集客数・過去最高売上を達成。
+                </p>
+                <div className="pt-6">
+                  <p className="text-2xl md:text-3xl font-bold font-rounded">
+                    業務量は圧倒的に増えたにも関わらず、<br />
+                    定時で帰ることができるようになったのです。
+                  </p>
                 </div>
-                <p className="text-sm opacity-90 mt-1">見積もり作成時間を87%削減</p>
               </div>
             </div>
           </div>
 
-          {/* Part 3: 感情的クライマックス（中央寄せ） */}
-          <div className="max-w-2xl mx-auto text-center mb-16 md:mb-20">
-            <p className="text-xl md:text-2xl font-bold text-text-heading leading-relaxed mb-8">
-              決して、かっこいいものじゃなかった。
-            </p>
-
-            <div className="my-12 md:my-16">
-              <p className="text-2xl md:text-4xl text-text-heading leading-relaxed font-rounded">
-                それを教えてくれる人が、<br />
-                僕の横にいたら<br />
-                <span className="text-primary-600 font-bold">どれだけ楽だっただろう・・・。</span>
-              </p>
-            </div>
-
-            <p className="text-lg text-text-body leading-relaxed">
-              そんな想いから、このサービスを作りました。
-            </p>
-          </div>
-
-          {/* Part 4: 使命（中央寄せ） */}
-          <div className="max-w-2xl mx-auto mb-16">
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-primary-100">
-              <p className="text-lg md:text-xl text-text-heading leading-relaxed text-center">
-                AIに詳しいだけではありません。<br />
-                <span className="font-bold text-primary-700">現場の痛みと、それを乗り越える泥臭いプロセスを知っています。</span>
-              </p>
-              <p className="text-lg text-text-body leading-relaxed text-center mt-6">
-                だから、一時的な代行ではなく、<br />
-                現場に定着するまで<span className="text-primary-600 font-bold">「伴走」</span>するサービスを。
-              </p>
-            </div>
-          </div>
-
-          {/* Before/After Results */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { label: "見積もり作成", before: "2時間", after: "15分" },
-              { label: "勤務時間", before: "0時残業", after: "定時帰り" },
-              { label: "セールス実績", before: "-", after: "全国トップ複数回" },
-              { label: "会社実績", before: "-", after: "過去最高売上" },
-            ].map((item, i) => (
-              <div key={i} className="bg-white rounded-xl p-4 text-center shadow-sm border border-base-100">
-                <p className="text-xs text-text-muted mb-1">{item.label}</p>
-                <p className="text-sm text-base-400 line-through">{item.before}</p>
-                <p className="text-lg font-bold text-primary-600 font-rounded">{item.after}</p>
+          {/* 投資の実績 */}
+          <div className="max-w-3xl mx-auto mb-20 md:mb-28">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-2xl p-8 text-center border border-base-100 shadow-sm">
+                <p className="text-text-muted text-sm mb-2">AIに費やした時間</p>
+                <p className="text-4xl font-bold text-primary-600 font-rounded">何百時間</p>
               </div>
-            ))}
+              <div className="bg-white rounded-2xl p-8 text-center border border-base-100 shadow-sm">
+                <p className="text-text-muted text-sm mb-2">AIに投資した金額</p>
+                <p className="text-4xl font-bold text-primary-600 font-rounded">何百万円</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Part 3: 感情的クライマックス - 左テキスト / 右余白 */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-28">
+            <div className="space-y-8 text-lg text-text-body leading-[1.9]">
+              <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded leading-relaxed">
+                あの頃、すぐに聞ける人がいたら、<br />
+                どれだけ楽だっただろう。
+              </p>
+              <p className="text-xl md:text-2xl text-text-heading leading-relaxed">
+                そんな人になれたら、<br />
+                どれだけ楽になる人がいるだろう。
+              </p>
+              <p className="text-xl text-primary-600 font-bold">
+                そんな想いから、このサービスを作りました。
+              </p>
+            </div>
+            <div className="hidden md:block"></div>
+          </div>
+
+          {/* 中間CTA */}
+          <div className="text-center mb-20 md:mb-28">
+            <Button size="lg" variant="primary" onClick={scrollToContact} className="shadow-primary-200/50">
+              無料AI活用診断に申し込む
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <p className="text-sm text-text-muted mt-3">毎月3社限定・Zoom 30分</p>
+          </div>
+
+          {/* Part 4: 使命 */}
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white rounded-3xl p-10 md:p-14 shadow-lg border border-primary-100">
+              <div className="space-y-8 text-lg md:text-xl text-text-body leading-[1.9] text-center">
+                <p>
+                  AIに詳しいだけではありません。
+                </p>
+                <p className="text-xl md:text-2xl font-bold text-text-heading">
+                  現場の痛みと、それを乗り越える<br className="md:hidden" />泥臭いプロセスを知っています。
+                </p>
+                <p>
+                  だから、一時的な代行ではなく、
+                </p>
+                <p className="text-2xl md:text-3xl font-bold text-primary-600 font-rounded">
+                  現場に定着するまで「伴走」する<br className="md:hidden" />サービスを。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
