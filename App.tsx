@@ -509,7 +509,7 @@ const App: React.FC = () => {
               {/* ストーリーの導入 */}
               <div className="text-center mb-10 md:mb-12">
                 <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-4">
-                  身の回りを端から端まで効率化した結果、
+                  その結果、
                 </p>
                 <p className="text-white text-xl md:text-2xl font-bold leading-relaxed">
                   営業の仕事をこなしながら、<br className="md:hidden" />
