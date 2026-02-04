@@ -695,7 +695,7 @@ const App: React.FC = () => {
               <span className="text-base-400 line-through text-lg">15万円</span>
               <span className="text-primary-500 text-sm ml-2">モニター価格</span>
               <div>
-                <span className="text-4xl font-bold text-text-heading font-rounded">10</span>
+                <span className="text-7xl font-bold text-primary-500 font-rounded">10</span>
                 <span className="text-text-muted">万円/月</span>
               </div>
             </div>
@@ -706,9 +706,8 @@ const App: React.FC = () => {
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> 社員研修</li>
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> オーダーメイド開発</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 mt-10">
-              <span className="group-hover:hidden">選択する</span>
-              <span className="hidden group-hover:inline">これにする</span>
+            <button onClick={scrollToContact} className="w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-2 hover:scale-105 transition-all duration-300 mt-10">
+              選択する
             </button>
           </div>
 
@@ -721,7 +720,7 @@ const App: React.FC = () => {
               <span className="text-base-400 line-through text-lg">40万円</span>
               <span className="text-primary-500 text-sm ml-2">モニター価格</span>
               <div>
-                <span className="text-4xl font-bold text-text-heading font-rounded">30</span>
+                <span className="text-7xl font-bold text-primary-500 font-rounded">30</span>
                 <span className="text-text-muted">万円/月</span>
               </div>
             </div>
@@ -731,9 +730,8 @@ const App: React.FC = () => {
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 内製化支援</li>
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> オーダーメイド開発</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 mt-10">
-              <span className="group-hover:hidden">選択する</span>
-              <span className="hidden group-hover:inline">これにする</span>
+            <button onClick={scrollToContact} className="w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-2 hover:scale-105 transition-all duration-300 mt-10">
+              選択する
             </button>
           </div>
 
@@ -746,7 +744,7 @@ const App: React.FC = () => {
               <span className="text-base-400 line-through text-lg">60万円</span>
               <span className="text-primary-500 text-sm ml-2">モニター価格</span>
               <div>
-                <span className="text-4xl font-bold text-text-heading font-rounded">50</span>
+                <span className="text-7xl font-bold text-primary-500 font-rounded">50</span>
                 <span className="text-text-muted">万円/月</span>
               </div>
             </div>
@@ -756,9 +754,8 @@ const App: React.FC = () => {
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> オーダーメイド開発</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> チャット相談(開発関連)</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 mt-10">
-              <span className="group-hover:hidden">選択する</span>
-              <span className="hidden group-hover:inline">これにする</span>
+            <button onClick={scrollToContact} className="w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-2 hover:scale-105 transition-all duration-300 mt-10">
+              選択する
             </button>
           </div>
         </div>
