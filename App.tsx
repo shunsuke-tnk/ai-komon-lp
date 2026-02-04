@@ -611,96 +611,96 @@ const App: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {/* 採用カード */}
-            <div className="p-10 rounded-[3rem] border border-base-200 bg-base-50 text-text-muted">
-              <h3 className="font-bold text-xl mb-8 flex items-center gap-3 font-rounded">
-                <div className="w-10 h-10 rounded-full bg-base-200 flex items-center justify-center text-text-muted">?</div>
+            <div className="p-8 md:p-10 rounded-[3rem] border border-base-200 bg-base-50 text-text-muted">
+              <h3 className="font-bold text-2xl mb-6 flex items-center gap-4 font-rounded">
+                <div className="w-12 h-12 rounded-full bg-base-200 flex items-center justify-center text-text-muted text-xl">?</div>
                 AI人材を採用
               </h3>
-              <ul className="space-y-6">
+              <ul className="space-y-4 text-lg">
                 <li className="border-b border-base-200 pb-3">
                   <div className="flex justify-between mb-1">
                     <span>月額コスト</span>
-                    <span className="font-medium flex items-center gap-1"><X className="w-4 h-4 text-base-300" />25万円〜</span>
+                    <span className="font-medium flex items-center gap-2"><X className="w-5 h-5 text-base-300" />25万円〜</span>
                   </div>
-                  <p className="text-xs text-right">給与・社会保険・福利厚生</p>
+                  <p className="text-sm text-right">給与・社会保険・福利厚生</p>
                 </li>
                 <li className="border-b border-base-200 pb-3">
                   <div className="flex justify-between mb-1">
                     <span>導入スピード</span>
-                    <span className="font-medium flex items-center gap-1"><X className="w-4 h-4 text-base-300" />採用活動が必要</span>
+                    <span className="font-medium flex items-center gap-2"><X className="w-5 h-5 text-base-300" />採用活動が必要</span>
                   </div>
-                  <p className="text-xs text-right">求人・面接・選考で数ヶ月</p>
+                  <p className="text-sm text-right">求人・面接・選考で数ヶ月</p>
                 </li>
                 <li className="border-b border-base-200 pb-3">
                   <div className="flex justify-between mb-1">
                     <span>教育</span>
-                    <span className="font-medium flex items-center gap-1"><X className="w-4 h-4 text-base-300" />教育が必要</span>
+                    <span className="font-medium flex items-center gap-2"><X className="w-5 h-5 text-base-300" />教育が必要</span>
                   </div>
-                  <p className="text-xs text-right">社内教育の負担が発生</p>
+                  <p className="text-sm text-right">社内教育の負担が発生</p>
                 </li>
                 <li className="border-b border-base-200 pb-3">
                   <div className="flex justify-between mb-1">
                     <span>スキル</span>
-                    <span className="font-medium flex items-center gap-1"><X className="w-4 h-4 text-base-300" />見極めが困難</span>
+                    <span className="font-medium flex items-center gap-2"><X className="w-5 h-5 text-base-300" />見極めが困難</span>
                   </div>
-                  <p className="text-xs text-right">採用後のミスマッチリスク</p>
+                  <p className="text-sm text-right">採用後のミスマッチリスク</p>
                 </li>
                 <li className="pt-2">
                   <div className="flex justify-between mb-1">
                     <span>継続性</span>
-                    <span className="font-medium flex items-center gap-1"><X className="w-4 h-4 text-base-300" />辞めるリスク</span>
+                    <span className="font-medium flex items-center gap-2"><X className="w-5 h-5 text-base-300" />辞めるリスク</span>
                   </div>
-                  <p className="text-xs text-right">退職時の引き継ぎ問題</p>
+                  <p className="text-sm text-right">退職時の引き継ぎ問題</p>
                 </li>
               </ul>
             </div>
 
             {/* AI顧問カード */}
-            <div className="p-10 rounded-[3rem] border-2 border-primary-100 bg-white shadow-xl shadow-primary-100/30 relative transform md:scale-105">
-              <div className="absolute -top-5 right-10 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">RECOMMENDED</div>
-              <h3 className="font-bold text-2xl text-text-heading mb-8 flex items-center gap-3 font-rounded">
-                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600"><Check size={20} /></div>
+            <div className="p-8 md:p-10 rounded-[3rem] border-2 border-primary-100 bg-white shadow-xl shadow-primary-100/30 relative transform md:scale-105">
+              <div className="absolute -top-5 right-10 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg">RECOMMENDED</div>
+              <h3 className="font-bold text-3xl text-text-heading mb-6 flex items-center gap-4 font-rounded">
+                <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600"><Check size={24} /></div>
                 AI顧問
               </h3>
-              <ul className="space-y-6">
+              <ul className="space-y-4 text-lg">
                 <li className="border-b border-primary-50 pb-3">
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-text-body">月額コスト</span>
-                    <span className="font-bold text-primary-600 flex items-center gap-1"><Check className="w-4 h-4" />10万円〜</span>
+                    <span className="font-bold text-primary-600 flex items-center gap-2 text-xl"><Check className="w-5 h-5" />10万円〜</span>
                   </div>
-                  <p className="text-xs text-right text-text-muted">シンプルな月額制</p>
+                  <p className="text-sm text-right text-text-muted">シンプルな月額制</p>
                 </li>
                 <li className="border-b border-primary-50 pb-3">
                   <div className="flex justify-between mb-1">
                     <span className="text-text-body">導入スピード</span>
-                    <span className="font-bold text-primary-600 flex items-center gap-1"><Check className="w-4 h-4" />今すぐ始められる</span>
+                    <span className="font-bold text-primary-600 flex items-center gap-2 text-xl"><Check className="w-5 h-5" />今すぐ始められる</span>
                   </div>
-                  <p className="text-xs text-right text-text-muted">契約後すぐにスタート</p>
+                  <p className="text-sm text-right text-text-muted">契約後すぐにスタート</p>
                 </li>
                 <li className="border-b border-primary-50 pb-3">
                   <div className="flex justify-between mb-1">
                     <span className="text-text-body">教育</span>
-                    <span className="font-bold text-primary-600 flex items-center gap-1"><Check className="w-4 h-4" />教育してくれる</span>
+                    <span className="font-bold text-primary-600 flex items-center gap-2 text-xl"><Check className="w-5 h-5" />教育してくれる</span>
                   </div>
-                  <p className="text-xs text-right text-text-muted">むしろ御社を教育</p>
+                  <p className="text-sm text-right text-text-muted">むしろ御社を教育</p>
                 </li>
                 <li className="border-b border-primary-50 pb-3">
                   <div className="flex justify-between mb-1">
                     <span className="text-text-body">スキル</span>
-                    <span className="font-bold text-primary-600 flex items-center gap-1"><Check className="w-4 h-4" />実績で証明済み</span>
+                    <span className="font-bold text-primary-600 flex items-center gap-2 text-xl"><Check className="w-5 h-5" />実績で証明済み</span>
                   </div>
-                  <p className="text-xs text-right text-text-muted">どんなAIにも対応可能</p>
+                  <p className="text-sm text-right text-text-muted">どんなAIにも対応可能</p>
                 </li>
                 <li className="pt-2">
                   <div className="flex justify-between mb-1">
                     <span className="text-text-body">継続性</span>
-                    <span className="font-bold text-primary-600 flex items-center gap-1"><Check className="w-4 h-4" />辞めない</span>
+                    <span className="font-bold text-primary-600 flex items-center gap-2 text-xl"><Check className="w-5 h-5" />辞めない</span>
                   </div>
-                  <p className="text-xs text-right text-text-muted">安定した長期サポート</p>
+                  <p className="text-sm text-right text-text-muted">安定した長期サポート</p>
                 </li>
               </ul>
-              <div className="mt-10 text-center">
-                <Button className="w-full" variant="primary" onClick={scrollToContact}>AI顧問に相談する</Button>
+              <div className="mt-8 text-center">
+                <Button className="w-full text-lg py-4" variant="primary" onClick={scrollToContact}>AI顧問に相談する</Button>
               </div>
             </div>
           </div>
