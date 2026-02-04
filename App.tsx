@@ -527,20 +527,6 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* 投資の実績 */}
-          <div className="max-w-3xl mx-auto mb-20 md:mb-28">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-2xl p-8 text-center border border-base-100 shadow-sm">
-                <p className="text-text-muted text-sm mb-2">AIに費やした時間</p>
-                <p className="text-4xl font-bold text-primary-600 font-rounded">何百時間</p>
-              </div>
-              <div className="bg-white rounded-2xl p-8 text-center border border-base-100 shadow-sm">
-                <p className="text-text-muted text-sm mb-2">AIに投資した金額</p>
-                <p className="text-4xl font-bold text-primary-600 font-rounded">何百万円</p>
-              </div>
-            </div>
-          </div>
-
           {/* Part 3: 感情的クライマックス - 左テキスト / 右余白 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-28">
             <div className="space-y-8 text-lg text-text-body leading-[1.9]">
@@ -573,7 +559,8 @@ const App: React.FC = () => {
             <div className="bg-white rounded-3xl p-10 md:p-14 shadow-lg border border-primary-100">
               <div className="space-y-8 text-lg md:text-xl text-text-body leading-[1.9] text-center">
                 <p>
-                  AIに詳しいだけではありません。
+                  私は、200万円以上かけてAIを学んできましたが、<br />
+                  AIに詳しいだけの人ではありません。
                 </p>
                 <p className="text-xl md:text-2xl font-bold text-text-heading">
                   現場の痛みと、それを乗り越える<br className="md:hidden" />泥臭いプロセスを知っています。
@@ -581,8 +568,8 @@ const App: React.FC = () => {
                 <p>
                   だから、一時的な代行ではなく、
                 </p>
-                <p className="text-2xl md:text-3xl font-bold text-primary-600 font-rounded">
-                  現場に定着するまで「伴走」する<br className="md:hidden" />サービスを。
+                <p className="text-xl md:text-2xl font-bold text-primary-600 font-rounded">
+                  現場に定着するまで「伴走」するサービスを。
                 </p>
               </div>
             </div>
