@@ -109,8 +109,9 @@ const ContactPage: React.FC = () => {
       <Section background="cream" decoration className="pt-36 pb-24 lg:pt-48 lg:pb-36">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
+            <span className="text-primary-500 font-bold tracking-widest text-sm uppercase mb-3 block">CONTACT</span>
             <h1 className="text-3xl md:text-4xl font-bold text-text-heading mb-4 font-rounded">
-              無料相談に申し込む
+              無料AI活用診断
             </h1>
             <p className="text-text-body">
               以下のフォームにご記入ください。<br />
@@ -129,7 +130,7 @@ const ContactPage: React.FC = () => {
               {/* Company Name */}
               <div>
                 <label htmlFor="companyName" className="block text-sm font-bold text-text-heading mb-2">
-                  貴社名/施設名 <span className="text-red-500">*</span>
+                  会社名 <span className="text-primary-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -139,14 +140,14 @@ const ContactPage: React.FC = () => {
                   value={formData.companyName}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body"
-                  placeholder="株式会社〇〇"
+                  placeholder="株式会社〇〇建設"
                 />
               </div>
 
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-bold text-text-heading mb-2">
-                  お名前 <span className="text-red-500">*</span>
+                  お名前 <span className="text-primary-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -163,7 +164,7 @@ const ContactPage: React.FC = () => {
               {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-bold text-text-heading mb-2">
-                  メールアドレス <span className="text-red-500">*</span>
+                  メールアドレス <span className="text-primary-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -173,14 +174,14 @@ const ContactPage: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body"
-                  placeholder="example@company.com"
+                  placeholder="example@company.co.jp"
                 />
               </div>
 
               {/* Phone */}
               <div>
                 <label htmlFor="phone" className="block text-sm font-bold text-text-heading mb-2">
-                  電話番号 <span className="text-text-muted text-xs">(任意)</span>
+                  電話番号
                 </label>
                 <input
                   type="tel"
@@ -189,8 +190,9 @@ const ContactPage: React.FC = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body"
-                  placeholder="090-1234-5678"
+                  placeholder="03-1234-5678"
                 />
+                <p className="text-xs text-text-muted mt-2">※ ハイフン付きで入力してください（例: 03-1234-5678）</p>
               </div>
 
               {/* Plan */}
@@ -208,7 +210,7 @@ const ContactPage: React.FC = () => {
                   <option value="">選択してください</option>
                   <option value="banso">伴走プラン（10万円/月）</option>
                   <option value="jiso">自走プラン（30万円/月）</option>
-                  <option value="agent">エージェント開発（50万円/月）</option>
+                  <option value="kaihatsu">開発プラン（50万円/月）</option>
                   <option value="undecided">まだ決めていない</option>
                 </select>
               </div>
@@ -216,7 +218,7 @@ const ContactPage: React.FC = () => {
               {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm font-bold text-text-heading mb-2">
-                  ご相談内容
+                  ご相談内容・ご質問など
                 </label>
                 <textarea
                   id="message"
@@ -225,7 +227,7 @@ const ContactPage: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-2xl border border-base-200 focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-text-body resize-none"
-                  placeholder="現在抱えている課題や、ご相談したい内容をご記入ください。"
+                  placeholder="現在のお悩みや、ご質問があればご記入ください"
                 />
               </div>
 
@@ -245,16 +247,13 @@ const ContactPage: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5 mr-2" />
-                      送信する
+                      無料相談を申し込む
+                      <Send className="w-5 h-5 ml-2" />
                     </>
                   )}
                 </Button>
               </div>
 
-              <p className="text-xs text-text-muted text-center pt-2">
-                送信いただいた情報は、プライバシーポリシーに基づき適切に管理いたします。
-              </p>
             </div>
           </form>
         </div>
