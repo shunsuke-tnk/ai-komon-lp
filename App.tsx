@@ -706,7 +706,7 @@ const App: React.FC = () => {
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> 社員研修</li>
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> オーダーメイド開発</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 animate-heartbeat hover:animate-none">
+            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300">
               <span className="group-hover:hidden">選択する</span>
               <span className="hidden group-hover:inline">これにする</span>
             </button>
@@ -731,7 +731,7 @@ const App: React.FC = () => {
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> 内製化支援</li>
               <li className="flex gap-3 text-base-300"><X className="w-5 h-5 shrink-0"/> オーダーメイド開発</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 animate-heartbeat hover:animate-none">
+            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300">
               <span className="group-hover:hidden">選択する</span>
               <span className="hidden group-hover:inline">これにする</span>
             </button>
@@ -756,7 +756,7 @@ const App: React.FC = () => {
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> オーダーメイド開発</li>
               <li className="flex gap-3"><Check className="w-5 h-5 text-primary-500 shrink-0"/> チャット相談(開発関連)</li>
             </ul>
-            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300 animate-heartbeat hover:animate-none">
+            <button onClick={scrollToContact} className="group w-full bg-gradient-to-r from-primary-400 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_20px_-4px_rgba(251,146,60,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(251,146,60,0.6)] hover:-translate-y-0.5 transition-all duration-300">
               <span className="group-hover:hidden">選択する</span>
               <span className="hidden group-hover:inline">これにする</span>
             </button>
