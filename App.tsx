@@ -235,7 +235,7 @@ const App: React.FC = () => {
 
           {/* 失敗のループ構造 */}
           <div className="mb-10">
-            <h3 className="text-xl font-bold text-text-heading font-rounded text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center mb-10">
               多くの会社が陥る「負のループ」
             </h3>
             <div className="bg-base-50 rounded-[2rem] p-6 md:p-10 border border-base-200">
@@ -261,7 +261,7 @@ const App: React.FC = () => {
                   <div key={i} className="relative">
                     <div className="bg-white rounded-2xl p-5 border border-base-100 shadow-sm h-full">
                       <div className="flex items-center gap-2 mb-3">
-                        <span className="w-7 h-7 bg-warm-100 text-warm-600 rounded-full flex items-center justify-center text-sm font-bold">{item.num}</span>
+                        <span className="w-7 h-7 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-bold">{item.num}</span>
                         <h4 className="font-bold text-text-heading text-base leading-tight">{item.title}</h4>
                       </div>
                       <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>
@@ -303,7 +303,7 @@ const App: React.FC = () => {
                   <div key={i} className="relative">
                     <div className={`bg-white rounded-2xl p-5 border shadow-sm h-full ${item.num === "6" ? "border-red-200 bg-red-50/30" : "border-base-100"}`}>
                       <div className="flex items-center gap-2 mb-3">
-                        <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${item.num === "6" ? "bg-red-100 text-red-500" : "bg-warm-100 text-warm-600"}`}>{item.num}</span>
+                        <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${item.num === "6" ? "bg-red-100 text-red-500" : "bg-primary-100 text-primary-600"}`}>{item.num}</span>
                         <h4 className={`font-bold text-base leading-tight ${item.num === "6" ? "text-red-600" : "text-text-heading"}`}>{item.title}</h4>
                       </div>
                       <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>
