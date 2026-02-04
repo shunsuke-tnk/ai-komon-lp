@@ -181,25 +181,46 @@ const App: React.FC = () => {
           </h2>
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-[3rem] p-8 md:p-12 soft-shadow border border-white">
-            <div className="space-y-5">
-              {[
-                "同じ内容を、何度も別の場所に入力している",
-                "過去のファイルやデータを探すだけで10分、20分と時間が消えていく",
-                "日報・議事録・報告書。「ちょっとした作業」の積み重ねが負担に",
-                "現場スタッフへの情報共有。伝えるだけなのに、余計な手間がかかる",
-                "AIに興味はあるけど、難しそう。導入しても定着しない気がする",
-                "既存のシステムは変えられない。結局、手入力は残るんでしょ？",
-                "本当は、目の前の人ともっと向き合う時間がほしい",
-              ].map((text, i) => (
-                <label key={i} className="flex items-center gap-4 cursor-pointer group">
-                  <div className="w-6 h-6 rounded-lg border-2 border-primary-300 bg-primary-50 flex items-center justify-center shrink-0 group-hover:border-primary-400 transition-colors">
-                    <Check className="w-4 h-4 text-primary-500" />
-                  </div>
-                  <span className="text-text-body leading-relaxed font-medium">{text}</span>
-                </label>
-              ))}
+        <div className="relative max-w-4xl mx-auto">
+          {/* 左側: 男性 */}
+          <div className="hidden md:block absolute left-0 top-0 -translate-x-full pr-4 w-40 lg:w-48">
+            <img
+              src="/images/男性_悩む_考える.png"
+              alt=""
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* 右側: 女性（少し下に配置） */}
+          <div className="hidden md:block absolute right-0 top-24 translate-x-full pl-4 w-40 lg:w-48">
+            <img
+              src="/images/女性_悩む_考える.png"
+              alt=""
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* 中央: チェックリスト */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white rounded-[3rem] p-8 md:p-12 soft-shadow border border-white">
+              <div className="space-y-5">
+                {[
+                  "同じ内容を、何度も別の場所に入力している",
+                  "過去のファイルやデータを探すだけで10分、20分と時間が消えていく",
+                  "日報・議事録・報告書。「ちょっとした作業」の積み重ねが負担に",
+                  "現場スタッフへの情報共有。伝えるだけなのに、余計な手間がかかる",
+                  "AIに興味はあるけど、難しそう。導入しても定着しない気がする",
+                  "既存のシステムは変えられない。結局、手入力は残るんでしょ？",
+                  "本当は、目の前の人ともっと向き合う時間がほしい",
+                ].map((text, i) => (
+                  <label key={i} className="flex items-center gap-4 cursor-pointer group">
+                    <div className="w-6 h-6 rounded-lg border-2 border-primary-300 bg-primary-50 flex items-center justify-center shrink-0 group-hover:border-primary-400 transition-colors">
+                      <Check className="w-4 h-4 text-primary-500" />
+                    </div>
+                    <span className="text-text-body leading-relaxed font-medium">{text}</span>
+                  </label>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -94,15 +94,15 @@ const ContactPage: React.FC = () => {
   if (isSubmitted) {
     return (
       <div className="min-h-screen text-text-body font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden bg-warm-50">
-        <div className="min-h-screen flex items-center justify-center py-8 px-4">
+        <div className="min-h-screen flex items-center justify-center py-6 md:py-8 px-4">
           <div className="max-w-md mx-auto text-center">
-            <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Check className="w-10 h-10 text-primary-600" />
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+              <Check className="w-8 h-8 md:w-10 md:h-10 text-primary-600" />
             </div>
-            <h1 className="text-2xl md:text-3xl font-bold text-text-heading mb-4 font-rounded">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-text-heading mb-3 md:mb-4 font-rounded">
               送信が完了しました
             </h1>
-            <p className="text-text-body mb-8 leading-relaxed">
+            <p className="text-sm md:text-base text-text-body mb-6 md:mb-8 leading-relaxed px-2 md:px-0">
               お問い合わせいただきありがとうございます。<br />
               営業日24時間以内に担当者よりご連絡いたします。
             </p>
@@ -120,44 +120,44 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen text-text-body font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden bg-warm-50">
-      <div className="min-h-screen flex flex-col justify-center py-6 px-4">
+      <div className="min-h-screen flex flex-col justify-start md:justify-center py-4 md:py-6 px-3 md:px-4">
         <div className="max-w-xl mx-auto w-full">
           {/* 戻るボタン */}
           <a
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary-600 transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-xs md:text-sm text-text-muted hover:text-primary-600 transition-colors mb-3 md:mb-4"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4" />
             トップページに戻る
           </a>
 
           {/* タイトル */}
-          <div className="text-center mb-6">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-text-heading mb-2 font-rounded">
+          <div className="text-center mb-4 md:mb-6">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-text-heading mb-1.5 md:mb-2 font-rounded">
               <span className="text-primary-500">無料AI活用診断</span><br />申し込みフォーム
             </h1>
-            <p className="text-sm text-text-muted">
+            <p className="text-xs md:text-sm text-text-muted px-2 md:px-0">
               以下のフォームにご記入ください。営業日24時間以内にご連絡いたします。
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-white/50">
+          <form onSubmit={handleSubmit} className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-xl border border-white/50">
             {error && (
               <div
                 ref={errorRef}
-                className="mb-4 p-3 bg-red-50 border-2 border-red-300 rounded-xl text-red-600 text-sm font-medium flex items-center gap-2 animate-pulse"
+                className="mb-3 md:mb-4 p-2.5 md:p-3 bg-red-50 border-2 border-red-300 rounded-lg md:rounded-xl text-red-600 text-xs md:text-sm font-medium flex items-center gap-2 animate-pulse"
               >
-                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-3.5 h-3.5 md:w-4 md:h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                 </svg>
                 {error}
               </div>
             )}
 
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {/* Company Name */}
               <div>
-                <label htmlFor="companyName" className="block text-sm font-bold text-text-heading mb-1.5">
+                <label htmlFor="companyName" className="block text-xs md:text-sm font-bold text-text-heading mb-1 md:mb-1.5">
                   会社名 <span className="text-primary-500">*</span>
                 </label>
                 <input
@@ -167,14 +167,14 @@ const ContactPage: React.FC = () => {
                   required
                   value={formData.companyName}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="株式会社〇〇建設"
                 />
               </div>
 
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-bold text-text-heading mb-1.5">
+                <label htmlFor="name" className="block text-xs md:text-sm font-bold text-text-heading mb-1 md:mb-1.5">
                   お名前 <span className="text-primary-500">*</span>
                 </label>
                 <input
@@ -184,14 +184,14 @@ const ContactPage: React.FC = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="山田 太郎"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-bold text-text-heading mb-1.5">
+                <label htmlFor="email" className="block text-xs md:text-sm font-bold text-text-heading mb-1 md:mb-1.5">
                   メールアドレス <span className="text-primary-500">*</span>
                 </label>
                 <input
@@ -201,14 +201,14 @@ const ContactPage: React.FC = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="example@company.co.jp"
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-bold text-text-heading mb-1.5">
+                <label htmlFor="phone" className="block text-xs md:text-sm font-bold text-text-heading mb-1 md:mb-1.5">
                   電話番号
                 </label>
                 <input
@@ -217,15 +217,15 @@ const ContactPage: React.FC = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm"
                   placeholder="03-1234-5678"
                 />
-                <p className="text-xs text-text-muted mt-1">※ ハイフン付きで入力してください</p>
+                <p className="text-[10px] md:text-xs text-text-muted mt-0.5 md:mt-1">※ ハイフン付きで入力してください</p>
               </div>
 
               {/* Plan */}
               <div>
-                <label htmlFor="plan" className="block text-sm font-bold text-text-heading mb-1.5">
+                <label htmlFor="plan" className="block text-xs md:text-sm font-bold text-text-heading mb-1 md:mb-1.5">
                   ご検討中のプラン
                 </label>
                 <select
@@ -233,7 +233,7 @@ const ContactPage: React.FC = () => {
                   name="plan"
                   value={formData.plan}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm bg-white"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm bg-white"
                 >
                   <option value="">選択してください</option>
                   <option value="banso">伴走プラン（10万円/月）</option>
@@ -245,7 +245,7 @@ const ContactPage: React.FC = () => {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-bold text-text-heading mb-1.5">
+                <label htmlFor="message" className="block text-xs md:text-sm font-bold text-text-heading mb-1 md:mb-1.5">
                   ご相談内容・ご質問など
                 </label>
                 <textarea
@@ -254,13 +254,13 @@ const ContactPage: React.FC = () => {
                   rows={3}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm resize-none"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl border border-base-200 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 transition-all outline-none text-text-body text-sm resize-none"
                   placeholder="現在のお悩みや、ご質問があればご記入ください"
                 />
               </div>
 
               {/* Submit Button */}
-              <div className="pt-2">
+              <div className="pt-1 md:pt-2">
                 <Button
                   type="submit"
                   variant="primary"
