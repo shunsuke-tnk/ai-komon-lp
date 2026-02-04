@@ -133,8 +133,8 @@ const ContactPage: React.FC = () => {
 
           {/* タイトル */}
           <div className="text-center mb-6">
-            <h1 className="text-2xl md:text-3xl font-bold text-text-heading mb-2 font-rounded">
-              無料AI活用診断
+            <h1 className="text-3xl md:text-4xl font-extrabold text-text-heading mb-2 font-rounded">
+              <span className="text-primary-500">無料AI活用診断</span><br />申し込みフォーム
             </h1>
             <p className="text-sm text-text-muted">
               以下のフォームにご記入ください。営業日24時間以内にご連絡いたします。
