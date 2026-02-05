@@ -57,7 +57,7 @@ const App: React.FC = () => {
               <div className="bg-gradient-to-br from-primary-400 to-primary-500 text-white p-2.5 rounded-full shadow-lg shadow-primary-500/20">
                 <Sun className="w-5 h-5 fill-current" />
               </div>
-              <span className="font-rounded font-bold text-xl text-text-heading tracking-tight">AI顧問</span>
+              <span className="font-rounded font-bold text-xl text-text-heading tracking-tight">AI顧問サービス</span>
             </a>
 
             {/* Desktop Nav */}
@@ -592,19 +592,19 @@ const App: React.FC = () => {
 
               {/* 結論 */}
               <div className="text-center pt-8 border-t border-primary-200">
-                <p className="text-text-heading text-xl md:text-2xl font-bold leading-relaxed mb-6">
+                <p className="text-text-heading text-base md:text-2xl font-bold leading-relaxed mb-4">
                   <span className="underline decoration-primary-500 decoration-4 underline-offset-4">業務量は圧倒的に増えた</span>にも関わらず、
                 </p>
-                <p className="text-2xl md:text-3xl text-text-heading font-bold font-rounded leading-relaxed">
-                  定時で帰ることができるようになったのです。
+                <p className="text-xl md:text-3xl text-text-heading font-bold font-rounded leading-relaxed">
+                  定時で帰ることができるようになりました。
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Part 3: 感情的クライマックス - 左テキスト / 右余白 */}
+          {/* Part 3: 感情的クライマックス - センターテキスト / 右画像 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-28">
-            <div className="space-y-8 text-lg text-text-body leading-[1.9]">
+            <div className="space-y-8 text-lg text-text-body leading-[1.9] text-center md:text-left">
               <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded leading-relaxed">
                 あの頃、すぐに聞ける人がいたら、<br />
                 どれだけ楽だっただろう。
@@ -617,7 +617,13 @@ const App: React.FC = () => {
                 そんな想いから、このサービスを作りました。
               </p>
             </div>
-            <div className="hidden md:block"></div>
+            <div className="hidden md:flex items-center justify-center">
+              <img
+                src="/images/8.png"
+                alt=""
+                className="w-full max-w-xs h-auto rounded-2xl"
+              />
+            </div>
           </div>
 
           {/* 中間CTA */}
