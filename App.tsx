@@ -9,7 +9,6 @@ import {
   Users,
   Zap,
   Target,
-  Clock,
   ArrowRight,
   Star,
   Menu,
@@ -495,13 +494,12 @@ const App: React.FC = () => {
               </div>
             </div>
             {/* 右: 写真 */}
-            <div className="order-1 md:order-2 md:sticky md:top-32">
-              <div className="aspect-[4/3] bg-gradient-to-br from-base-200 to-base-300 rounded-2xl flex items-center justify-center overflow-hidden">
-                <div className="text-center text-base-400">
-                  <Clock className="w-16 h-16 mx-auto mb-3 opacity-50" />
-                  <p className="text-sm">残業イメージ写真</p>
-                </div>
-              </div>
+            <div className="order-1 md:order-2 flex items-end justify-start pt-28">
+              <img
+                src="/images/overtime.png"
+                alt="残業で疲れた男性"
+                className="w-[90%] h-auto rounded-2xl -ml-8"
+              />
             </div>
           </div>
 
