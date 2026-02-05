@@ -355,31 +355,37 @@ const App: React.FC = () => {
                 ))}
               </div>
 
-              {/* 縦矢印（上段→下段） */}
-              <div className="flex justify-end md:pr-[16.67%] py-3">
+              {/* 縦矢印（上段→下段）- デスクトップのみ表示 */}
+              <div className="hidden md:flex justify-end md:pr-[16.67%] py-3">
                 <span className="text-primary-400 font-black text-2xl leading-none rotate-90 tracking-tighter">&gt;&gt;</span>
               </div>
 
-              {/* 下段 3つ（右から左へ流れる） */}
+              {/* 下段 3つ（モバイル: 4→5→6の順、デスクトップ: 6←5←4の表示） */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative">
                 {[
                   {
-                    num: "6",
-                    title: "効果を実感できず、\n使わなくなる",
-                    desc: "結局「AIは難しい」という結論になり、元の業務に戻ってしまう",
+                    num: "4",
+                    title: "「議事録要約」など、\n活用が限定的",
+                    desc: "試しに使ってみたものの、それ以上の活用方法が見つからない",
+                    mobileOrder: "order-1",
+                    desktopOrder: "md:order-3",
                   },
                   {
                     num: "5",
                     title: "他の業務への応用が\n思いつかない",
                     desc: "自社の業務フローのどこにAIが使えるのか、発想が広がらない",
+                    mobileOrder: "order-2",
+                    desktopOrder: "md:order-2",
                   },
                   {
-                    num: "4",
-                    title: "「議事録要約」など、\n活用が限定的",
-                    desc: "試しに使ってみたものの、それ以上の活用方法が見つからない",
+                    num: "6",
+                    title: "効果を実感できず、\n使わなくなる",
+                    desc: "結局「AIは難しい」という結論になり、元の業務に戻ってしまう",
+                    mobileOrder: "order-3",
+                    desktopOrder: "md:order-1",
                   },
                 ].map((item, i) => (
-                  <div key={i} className="relative">
+                  <div key={i} className={`relative ${item.mobileOrder} ${item.desktopOrder}`}>
                     <div className={`bg-white rounded-2xl p-6 border shadow-sm h-full ${item.num === "6" ? "border-red-200 bg-red-50/30" : "border-base-100"}`}>
                       <div className="flex items-start gap-3 mb-3">
                         <span className={`w-8 h-8 rounded-full flex items-center justify-center text-base font-bold shrink-0 ${item.num === "6" ? "bg-red-100 text-red-500" : "bg-primary-100 text-primary-600"}`}>{item.num}</span>
@@ -387,9 +393,9 @@ const App: React.FC = () => {
                       </div>
                       <p className="text-text-muted text-base leading-relaxed">{item.desc}</p>
                     </div>
-                    {/* 横矢印（6←5, 5←4）右から左なので、右に矢印 */}
-                    {i < 2 && (
-                      <div className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 items-center">
+                    {/* 横矢印（6←5, 5←4）- デスクトップのみ表示 */}
+                    {item.num !== "6" && (
+                      <div className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 items-center">
                         <span className="text-primary-400 font-black text-2xl tracking-tighter">&lt;&lt;</span>
                       </div>
                     )}
