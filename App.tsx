@@ -466,9 +466,14 @@ const App: React.FC = () => {
 
         <div className="max-w-5xl mx-auto">
           {/* Part 1: 残業だらけの営業時代 - 左テキスト / 右写真 */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-20 md:mb-28">
+          <div className="relative grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-20 md:mb-28">
+            {/* スマホ用: 背景画像として透かし表示 */}
+            <div
+              className="absolute inset-0 md:hidden bg-contain bg-no-repeat bg-right-top opacity-20 pointer-events-none"
+              style={{ backgroundImage: "url('/images/overtime.png')" }}
+            />
             {/* 左: テキスト */}
-            <div className="order-2 md:order-1">
+            <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded mb-8">
                 残業だらけの営業時代
               </h3>
@@ -493,8 +498,8 @@ const App: React.FC = () => {
                 </p>
               </div>
             </div>
-            {/* 右: 写真 */}
-            <div className="order-1 md:order-2 flex items-end justify-start pt-28">
+            {/* 右: 写真（PC用のみ表示） */}
+            <div className="hidden md:flex items-end justify-start pt-28">
               <img
                 src="/images/overtime.png"
                 alt="残業で疲れた男性"
