@@ -517,9 +517,14 @@ const App: React.FC = () => {
           </div>
 
           {/* Part 2: 死に物狂いの効率化 - 左写真 / 右テキスト */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-20 md:mb-28">
-            {/* 左: 写真 */}
-            <div className="md:sticky md:top-32">
+          <div className="relative grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-20 md:mb-28">
+            {/* スマホ用: 背景画像として透かし表示 */}
+            <div
+              className="absolute inset-0 md:hidden bg-contain bg-no-repeat bg-left-top opacity-20 pointer-events-none"
+              style={{ backgroundImage: "url('/images/efficiency.png')" }}
+            />
+            {/* 左: 写真（PC用のみ表示） */}
+            <div className="hidden md:block md:sticky md:top-32">
               <img
                 src="/images/efficiency.png"
                 alt="効率化に取り組む様子"
@@ -527,7 +532,7 @@ const App: React.FC = () => {
               />
             </div>
             {/* 右: テキスト */}
-            <div>
+            <div className="relative z-10">
               <div className="space-y-6 text-lg text-text-body leading-[1.9]">
                 <p>
                   この頃、世の中にChatGPTが登場し、騒がれ始めていました。私は「これしかない！」と思い、死に物狂いでAIを学んだのです。
