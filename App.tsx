@@ -306,7 +306,7 @@ const App: React.FC = () => {
             </div>
 
             <p className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center">
-              うまくいかない企業には、<span className="text-primary-600">ある共通点</span>があります。
+              うまくいかない企業には、<br className="md:hidden" /><span className="text-primary-600">ある共通点</span>があります。
             </p>
           </div>
 
@@ -314,7 +314,7 @@ const App: React.FC = () => {
           <div className="mt-8 md:mt-12 mb-10 relative z-10">
             <div className="bg-base-50 rounded-[2rem] p-6 md:p-10 border border-base-200">
               <h3 className="text-2xl md:text-3xl font-bold text-text-heading font-rounded text-center mb-10">
-                多くの会社が陥る「負のループ」
+                多くの会社が陥る<br className="md:hidden" />「負のループ」
               </h3>
               {/* 上段 3つ */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative">
@@ -1066,16 +1066,16 @@ const App: React.FC = () => {
 
           {/* Sub copy */}
           <div className="mb-6">
-            <p className="text-lg md:text-xl text-text-heading font-bold leading-relaxed">
+            <p className="text-sm md:text-xl text-text-heading font-bold leading-relaxed">
               「何を導入すべきかわからない」<br />
               「どこを改善すべきかわからない」
             </p>
           </div>
 
-          <p className="text-text-muted mb-6">そんな状態で大丈夫です。</p>
+          <p className="text-sm md:text-base text-text-muted mb-6">そんな状態で大丈夫です。</p>
 
           <div className="mb-10">
-            <p className="text-text-heading font-bold text-lg md:text-xl leading-relaxed">
+            <p className="text-text-heading font-bold text-sm md:text-xl leading-relaxed">
               大事なのは、「どこを直すべきか」を知ること。<br />
               それがわかれば、あとは一つずつ進めるだけです。
             </p>
@@ -1092,7 +1092,7 @@ const App: React.FC = () => {
                 <div className="text-primary-500 flex justify-center mb-2">
                   {item.icon}
                 </div>
-                <p className="font-bold text-text-heading text-sm md:text-base mb-1">{item.title}</p>
+                <p className="font-bold text-text-heading text-xs md:text-base mb-1">{item.title}</p>
                 <p className="text-[10px] md:text-xs text-text-muted">{item.desc}</p>
               </div>
             ))}
@@ -1106,9 +1106,9 @@ const App: React.FC = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col items-center gap-4">
-            <Button size="xl" variant="primary" onClick={scrollToContact} className="w-full md:w-auto px-12 md:px-16 py-5 md:py-6 text-lg md:text-xl shadow-lg shadow-primary-300/30">
+            <Button size="xl" variant="primary" onClick={scrollToContact} className="w-full md:w-auto px-8 md:px-16 py-3 md:py-6 text-sm md:text-xl shadow-lg shadow-primary-300/30">
               無料AI活用診断に申し込む
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
             </Button>
             <p className="text-sm text-text-muted">
               ※ 毎月3社限定 / Zoom 30分
