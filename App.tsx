@@ -22,7 +22,6 @@ import {
   Sun,
   ChevronDown,
   Sparkles,
-  Settings,
   Video,
   MessageSquare,
   CheckCircle,
@@ -521,12 +520,11 @@ const App: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-20 md:mb-28">
             {/* 左: 写真 */}
             <div className="md:sticky md:top-32">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                <div className="text-center text-primary-400">
-                  <Settings className="w-16 h-16 mx-auto mb-3 opacity-50" />
-                  <p className="text-sm">効率化イメージ写真</p>
-                </div>
-              </div>
+              <img
+                src="/images/efficiency.png"
+                alt="効率化に取り組む様子"
+                className="w-full h-auto rounded-2xl"
+              />
             </div>
             {/* 右: テキスト */}
             <div>
