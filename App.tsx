@@ -441,13 +441,12 @@ const App: React.FC = () => {
           {/* 安心メッセージ */}
           <div className="bg-[#43302b] rounded-[2rem] p-8 md:p-10 text-center text-white">
             <p className="text-warm-200 mb-2">安心してください。</p>
-            <p className="text-2xl md:text-3xl font-bold font-rounded mb-4">
+            <p className="text-xl md:text-3xl font-bold font-rounded mb-4">
               それ、全部AI顧問がやります。
             </p>
             <p className="text-warm-200 leading-relaxed">
               情報収集も、業務の分解も、<br className="md:hidden" />
-              「どこにAIが使えるか」を見つけることも。<br/>
-              <span className="text-white font-medium">あなたは本業に集中してください。</span>
+              「どこにAIが使えるか」を見つけることも。
             </p>
           </div>
         </div>
