@@ -4,7 +4,6 @@ import { Button } from './components/Button';
 import { AccordionItem } from './components/Accordion';
 import {
   Check,
-  ChevronRight,
   MessageCircle,
   TrendingUp,
   Users,
@@ -348,8 +347,8 @@ const App: React.FC = () => {
                     </div>
                     {/* 横矢印（1→2, 2→3） */}
                     {i < 2 && (
-                      <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-                        <ChevronRight className="w-6 h-6 text-warm-300" />
+                      <div className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 items-center">
+                        <span className="text-primary-400 font-black text-2xl tracking-tighter">&gt;&gt;</span>
                       </div>
                     )}
                   </div>
@@ -357,8 +356,8 @@ const App: React.FC = () => {
               </div>
 
               {/* 縦矢印（上段→下段） */}
-              <div className="flex justify-end md:pr-[16.67%] py-2">
-                <ChevronDown className="w-6 h-6 text-warm-300" />
+              <div className="flex justify-end md:pr-[16.67%] py-3">
+                <span className="text-primary-400 font-black text-2xl leading-none rotate-90 tracking-tighter">&gt;&gt;</span>
               </div>
 
               {/* 下段 3つ（右から左へ流れる） */}
@@ -388,10 +387,10 @@ const App: React.FC = () => {
                       </div>
                       <p className="text-text-muted text-base leading-relaxed">{item.desc}</p>
                     </div>
-                    {/* 横矢印（6←5, 5←4）右から左なので、左に矢印 */}
+                    {/* 横矢印（6←5, 5←4）右から左なので、右に矢印 */}
                     {i < 2 && (
-                      <div className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 z-10 rotate-180">
-                        <ChevronRight className="w-6 h-6 text-warm-300" />
+                      <div className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 items-center">
+                        <span className="text-primary-400 font-black text-2xl tracking-tighter">&lt;&lt;</span>
                       </div>
                     )}
                   </div>
