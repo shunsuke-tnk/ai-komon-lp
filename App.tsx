@@ -120,7 +120,7 @@ const App: React.FC = () => {
               </span>
             </h1>
 
-            <p className="text-lg text-text-body font-medium leading-relaxed mb-8">
+            <p className="text-sm md:text-lg text-text-body font-medium leading-relaxed mb-8">
               「AIのこと、誰に聞けば・・・」は、もう終わり。<br/>
               専門家が御社のAI活用を0から伴走支援します。
             </p>
@@ -509,8 +509,8 @@ const App: React.FC = () => {
           {/* 転換点 - ドラマティックな引用（全幅） */}
           <div className="bg-[#43302b] rounded-3xl py-14 md:py-20 px-6 md:px-12 mb-20 md:mb-28">
             <div className="mx-auto text-center">
-              <p className="text-lg md:text-4xl font-bold text-white leading-snug font-rounded whitespace-nowrap">
-                「このままじゃ、一生残業地獄から抜け出せない。」
+              <p className="text-xl md:text-4xl font-bold text-white leading-snug font-rounded md:whitespace-nowrap">
+                「このままじゃ、<br className="md:hidden" />一生残業地獄から抜け出せない。」
               </p>
             </div>
           </div>
